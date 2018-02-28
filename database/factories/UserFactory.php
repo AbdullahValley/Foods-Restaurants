@@ -19,6 +19,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'photo' => $faker->imageUrl($width = 200, $height = 200),
         'phone' => $faker->phoneNumber,
+        'address' => $faker->streetAddress,
         'member_id' => $faker->numberBetween($min = 1, $max = 10),
         'role' => $faker->numberBetween($min = 1, $max = 4),
         'status' => $faker->numberBetween($min = 0, $max = 1),

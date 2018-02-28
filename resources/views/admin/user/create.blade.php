@@ -44,17 +44,19 @@
                         </div>
                         <div class="x_content">
 
-                            <form class="form-horizontal form-label-left" novalidate>
+                            <form action="{{ action('UserController@store') }}" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
+                                @csrf
 
                                 <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
                                 </p>
                                 <span class="section">Personal Info</span>
 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Username <span class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
+                                        <input id="name" class="form-control col-md-7 col-xs-12" name="username" placeholder="Enter Unique Username" required="required" type="text">
+                                        @if($errors->has('username')) <span class="text-danger">{{ $errors->first('username') }}</span> @endif
                                     </div>
                                 </div>
                                 <div class="item form-group">
@@ -62,66 +64,82 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Confirm Email <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Number <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="number" id="number" name="number" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Website URL <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="url" id="website" name="website" required="required" placeholder="www.website.com" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">Occupation <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="occupation" type="text" name="occupation" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
+                                        @if($errors->has('email')) <span class="text-danger">{{ $errors->first('email') }}</span> @endif
                                     </div>
                                 </div>
                                 <div class="item form-group">
                                     <label for="password" class="control-label col-md-3">Password</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+                                        <input id="password" type="password" name="password" class="form-control col-md-7 col-xs-12" required="required">
+                                        @if($errors->has('password')) <span class="text-danger">{{ $errors->first('password') }}</span> @endif
                                     </div>
                                 </div>
                                 <div class="item form-group">
-                                    <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Repeat Password</label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
-                                    </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Telephone <span class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Phone <span class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                                        @if($errors->has('phone')) <span class="text-danger">{{ $errors->first('phone') }}</span> @endif
                                     </div>
                                 </div>
                                 <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Textarea <span class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Full Address <span class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
+                                        <textarea id="textarea" required="required" name="address" class="form-control col-md-7 col-xs-12"></textarea>
                                     </div>
                                 </div>
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="photo">Photo <span class="required"></span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="file" id="photo" name="photo" class="form-control col-md-7 col-xs-12">
+                                        @if($errors->has('photo')) <span class="text-danger">{{ $errors->first('photo') }}</span> @endif
+                                    </div>
+                                </div>
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="role">Role <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                        @php($roles = config('appconfig.roles'))
+                                        @foreach($roles as $key => $role)
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="{{ $role }}">
+
+                                                 <input type="radio" class="flat" id="{{ $role }}" name="role" value="{{ $key }}" class="form-control col-md-7 col-xs-12" required="required" {{ old('role') == $key ? 'checked' : '' }}> {{ $role }}
+
+                                            </label>
+                                        @endforeach
+                                        @if($errors->has('role')) <span class="text-danger">{{ $errors->first('role') }}</span> @endif
+
+                                    </div>
+                                </div>
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="status">Status <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="active">
+
+                                                <input type="radio" class="flat" id="active" name="status" value="1" class="form-control col-md-7 col-xs-12" required="required" {{ old('status') == 1 ? 'checked' : '' }}> Active
+
+                                            </label>
+
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="inactive">
+
+                                                <input type="radio" class="flat" id="inactive" name="status" value="0" class="form-control col-md-7 col-xs-12" required="required" {{ old('status') == 0 ? 'checked' : '' }}> Inactive
+
+                                            </label>
+                                        @if($errors->has('status')) <span class="text-danger">{{ $errors->first('status') }}</span> @endif
+
+                                    </div>
+                                </div>
+
                                 <div class="ln_solid"></div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-3">
-                                        <button type="submit" class="btn btn-primary">Cancel</button>
                                         <button id="send" type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                 </div>

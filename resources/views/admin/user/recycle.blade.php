@@ -85,21 +85,26 @@
                                     <td>{{ $user->status ? "Active" : "Inactive" }}</td>
                                     <td>
 
-
-
-                                        <a href="{{ action('UserController@edit', $user->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
-                                        <form action="{{ action('UserController@temp_delete', $user->id) }}" method="post" style="display: inline">
+                                        <form action="{{ action('UserController@restore', $user->id) }}" method="post" style="display: inline">
                                             @csrf
-                                            {{ method_field('PUT') }}
+                                            {{ method_field('PATCH') }}
 
-                                            <input type="hidden" name="status" value="0">
+                                            <input type="hidden" name="status" value="1">
                                             <input type="hidden" name="id" value="{{ $user->id }}">
 
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this user ?')">
-                                                <i class="fa fa-times"> Delete</i>
+                                            <button type="submit" class="btn btn-warning btn-sm" onclick="return confirm('Do you want to Restore this user ?')">
+                                                <i class="fa fa-edit"> Restore</i>
                                             </button>
                                         </form>
 
+
+                                        <form action="{{ action('UserController@destroy', $user->id) }}" method="post" style="display: inline">
+                                            @csrf
+                                            {{ method_field('DELETE') }}
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('PERMANENTLY Delete this User. Are you Sure ?')">
+                                                <i class="fa fa-times"> Delete</i>
+                                            </button>
+                                        </form>
 
                                     </td>
                                 </tr>

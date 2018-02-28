@@ -105,13 +105,48 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        return view ('admin.user.edit');
+        $user = User::find($id);
+        return view ('admin.user.edit',compact('user'));
     }
 
 
     public function update(Request $request, $id)
     {
-        //
+        //dd($request);
+
+        $this->validate($request, [
+            'username'  => 'required|unique:users,username,'.$id,
+            'email'     => 'required|email|unique:users,email,'.$id,
+            'phone'     => 'required|unique:users,phone,'.$id,
+            'photo'     => 'mimes:jpeg,png',
+            'role'      => 'required'
+        ]);
+
+        $user           = User::find($id);
+
+        $user->username = $request->username;
+        $user->email    = $request->email;
+        $user->phone    = $request->phone;
+        $user->address    = $request->address;
+
+        if ($request->hasFile('photo'))
+        {
+            $file = $request->photo;
+            $image = Image::make($file)->resize(200, null, function ($constraint){
+                $constraint->aspectRatio();
+            })->save(public_path(config('appconfig.imagePath') . $file->getClientOriginalName()));
+
+            if ($image){
+                $user->photo   = $file->getClientOriginalName();
+            }
+        }
+
+        $user->role     = $request->role;
+        $user->status   = $request->status;
+
+        $user->save();
+
+        return redirect('food-admin/users')->with('successMsg', 'The User Updated Successfully!');
     }
 
     public function destroy($id)

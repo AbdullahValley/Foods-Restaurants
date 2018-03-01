@@ -92,8 +92,8 @@
                                             <input type="hidden" name="status" value="1">
                                             <input type="hidden" name="id" value="{{ $user->id }}">
 
-                                            <button type="submit" class="btn btn-warning btn-sm" onclick="return confirm('Do you want to Restore this user ?')">
-                                                <i class="fa fa-edit"> Restore</i>
+                                            <button type="submit" class="btn btn-info btn-xs" onclick="return confirm('Do you want to Restore this user ?')">
+                                                <i class="fa fa-pencil"> Restore</i>
                                             </button>
                                         </form>
 
@@ -101,8 +101,8 @@
                                         <form action="{{ action('UserController@destroy', $user->id) }}" method="post" style="display: inline">
                                             @csrf
                                             {{ method_field('DELETE') }}
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('PERMANENTLY Delete this User. Are you Sure ?')">
-                                                <i class="fa fa-times"> Delete</i>
+                                            <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('PERMANENTLY Delete this User. Are you Sure ?')">
+                                                <i class="fa fa-trash-o"> Delete</i>
                                             </button>
                                         </form>
 

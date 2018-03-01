@@ -15,6 +15,15 @@
                     <li><a href="{{ url('/food-admin/recycle') }}">Recycle User</a></li>
                 </ul>
             </li>
+
+            <li><a><i class="fa fa-cogs"></i> Role-Permission <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="{{ url('/food-admin/roles') }}">Roles</a></li>
+                    <li><a href="{{ url('/food-admin/permissions') }}">Permissions</a></li>
+                    <li><a href="{{ url('/food-admin/role-permission') }}">Add Role & Permission</a></li>
+                </ul>
+            </li>
+
             <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="form.html">General Form</a></li>

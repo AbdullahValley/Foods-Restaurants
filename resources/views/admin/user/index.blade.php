@@ -87,7 +87,7 @@
 
 
 
-                                        <a href="{{ action('UserController@edit', $user->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Edit</a>
+                                        <a href="{{ action('UserController@edit', $user->id) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</a>
                                         <form action="{{ action('UserController@temp_delete', $user->id) }}" method="post" style="display: inline">
                                             @csrf
                                             {{ method_field('PUT') }}
@@ -95,8 +95,8 @@
                                             <input type="hidden" name="status" value="0">
                                             <input type="hidden" name="id" value="{{ $user->id }}">
 
-                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure to delete this user ?')">
-                                                <i class="fa fa-times"> Delete</i>
+                                            <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete this user ?')">
+                                                <i class="fa fa-trash-o"> Delete</i>
                                             </button>
                                         </form>
 

@@ -10,7 +10,10 @@ class RolepermissionController extends Controller
 {
     public function index()
     {
-        return view('admin.role-permission.role-permission-add');
+        $roles = Role::orderBY('id')->get();
+        $permissions = Permission::orderBY('id')->get();
+
+        return view('admin.role-permission.role-permission-add',compact('roles','permissions'));
     }
 
     public function create()

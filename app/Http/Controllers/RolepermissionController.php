@@ -10,10 +10,19 @@ class RolepermissionController extends Controller
 {
     public function index()
     {
-        $roles = Role::orderBY('id')->get();
-        $permissions = Permission::orderBY('id')->get();
+        $roles = Role::with('permissions')->get();
+        $permissions = Permission::with('roles')->get();
 
-        return view('admin.role-permission.role-permission-add',compact('roles','permissions'));
+        if (request()->permissionRole){
+            foreach (request()->permissionRole as $k => $pr){
+                $role = Role::find($k);
+                $role->syncPermissions($pr);
+            }
+
+            return redirect('/food-admin/role-permission')->with('successMsg', 'The Role & Permission have been updated');
+        }
+
+        return view('admin.role-permission.role-permission-add',compact('roles','permissions', 'permissionRoles'));
     }
 
     public function create()

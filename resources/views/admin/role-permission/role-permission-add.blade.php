@@ -6,7 +6,9 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body no-padding">
-                <form action="/role/save/permission" method="post">
+                <form action="{{ action('RolepermissionController@index') }}" method="post">
+
+                    @csrf
 
             <div class="table-responsive">
 
@@ -21,28 +23,21 @@
                             @endforeach
                         </tr>
 
-                        @foreach($permissions as $permission)
+                        @foreach($permissions as $key => $permission)
 
-                        <tr>
-                            <td>
-                                <code>{{ $permission->name }}</code>
-                            </td>
-                            <td>
-                                {{ $permission->display_name }}
-                            </td>
-                            <td align="center">
-                                <input type="checkbox" class="flat" name="" value="">
-                            </td>
-                            <td align="center">
-                                <input type="checkbox" class="flat" name="" value="">
-                            </td>
-                            <td align="center">
-                                <input type="checkbox" class="flat" name="" value="">
-                            </td>
-                            <td align="center">
-                                <input type="checkbox" class="flat" name="" value="">
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <code>{{ $permission->name }}</code>
+                                </td>
+                                <td>
+                                    {{ $permission->display_name }}
+                                </td>
+                                @foreach($roles as $role)
+                                    <td align="center">
+                                        <input type="checkbox" class="flat" name="permissionRole[{{ $role->id }}][]" value="{{ $permission->name }}"{{ $role->hasPermission($permission->name) ? ' checked' : ''}}>
+                                    </td>
+                                @endforeach
+                            </tr>
 
                         @endforeach
 
@@ -51,7 +46,10 @@
             </div>
 
                 </form>
+
             </div>
+
+
             <!-- /.box-body -->
             <div class="box-footer clearfix">
                 <button type="submit" class="btn btn-success pull-right">Add Role & Permission</button>

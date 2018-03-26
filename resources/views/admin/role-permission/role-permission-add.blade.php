@@ -3,6 +3,12 @@
 @section('content')
             <div class="box-header">
                 <h3 class="box-title">Role & Permission Add</h3>
+
+                @if(session('successMsg'))
+                    <span class="alert alert-success alert-dismissible" role="alert">
+                {{ session('successMsg') }}</span>
+                @endif
+
             </div>
             <!-- /.box-header -->
             <div class="box-body no-padding">
@@ -45,13 +51,12 @@
                     </table>
             </div>
 
+                    <!-- /.box-body -->
+                    <div class="box-footer clearfix">
+                        <button type="submit" class="btn btn-success pull-right">Add Role & Permission</button>
+                    </div>
+
                 </form>
 
-            </div>
-
-
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-                <button type="submit" class="btn btn-success pull-right">Add Role & Permission</button>
             </div>
 @endsection

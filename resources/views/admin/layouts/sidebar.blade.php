@@ -75,6 +75,12 @@
                     <li><a href="#">Top Compares</a></li>
                 </ul>
             </li>
+            <li><a><i class="fa fa-bug"></i> Restaurant Tips <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="#">Add Tips</a></li>
+                    <li><a href="#">All Tips</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
@@ -118,6 +124,12 @@
                     <li><a href="#">All News</a></li>
                 </ul>
             </li>
+            <li><a><i class="fa fa-bug"></i> Food Recipes <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="#">Add Recipe</a></li>
+                    <li><a href="#">All Recipes</a></li>
+                </ul>
+            </li>
             <li><a><i class="fa fa-bug"></i> Food Compares <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Compare Status</a></li>
@@ -130,6 +142,12 @@
     <div class="menu_section">
         <h3>Location</h3>
         <ul class="nav side-menu">
+            <li><a><i class="fa fa-bug"></i> City <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="#">Add City</a></li>
+                    <li><a href="#">All Cities</a></li>
+                </ul>
+            </li>
             <li><a><i class="fa fa-bug"></i> Location <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Location</a></li>

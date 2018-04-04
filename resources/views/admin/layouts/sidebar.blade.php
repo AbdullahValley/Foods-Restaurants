@@ -27,55 +27,55 @@
     <div class="menu_section">
         <h3>Restaurant</h3>
         <ul class="nav side-menu">
-            <li><a><i class="fa fa-bug"></i> Restaurant Types <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-crosshairs"></i> Restaurant Types <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Type</a></li>
                     <li><a href="#">All Types</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant Categories <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-certificate"></i> Restaurant Categories <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Category</a></li>
                     <li><a href="#">All Categories</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant Reviews <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-tablet"></i> Restaurant Reviews <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Review</a></li>
                     <li><a href="#">All Reviews</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant Comments <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-comment"></i> Restaurant Comments <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Pending Comments</a></li>
                     <li><a href="#">All Comments</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant Facilities <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-star"></i> Restaurant Facilities <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Facility</a></li>
                     <li><a href="#">All Facilities</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurants <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-beer"></i> Restaurants <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Restaurant</a></li>
                     <li><a href="#">All Restaurants</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant News <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-list-alt"></i> Restaurant News <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add News</a></li>
                     <li><a href="#">All News</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant Compares <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-th-list"></i> Restaurant Compares <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Compare Status</a></li>
                     <li><a href="#">Top Compares</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Restaurant Tips <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-gratipay"></i> Restaurant Tips <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Tips</a></li>
                     <li><a href="#">All Tips</a></li>
@@ -88,49 +88,49 @@
     <div class="menu_section">
         <h3>Food</h3>
         <ul class="nav side-menu">
-            <li><a><i class="fa fa-bug"></i> Food Courts <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-coffee"></i> Food Courts <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Court</a></li>
                     <li><a href="#">All Courts</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Food Groups <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-object-group"></i> Food Groups <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Group</a></li>
                     <li><a href="#">All Groups</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Food Reviews <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-registered"></i> Food Reviews <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Review</a></li>
                     <li><a href="#">All Reviews</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Food Comments <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-comments"></i> Food Comments <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Pending Comments</a></li>
                     <li><a href="#">All Comments</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Foods <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-apple"></i> Foods <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Food</a></li>
                     <li><a href="#">All Foods</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Food News <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-file"></i> Food News <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add News</a></li>
                     <li><a href="#">All News</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Food Recipes <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-recycle"></i> Food Recipes <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Recipe</a></li>
                     <li><a href="#">All Recipes</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Food Compares <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-compress"></i> Food Compares <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Compare Status</a></li>
                     <li><a href="#">Top Compares</a></li>
@@ -142,19 +142,19 @@
     <div class="menu_section">
         <h3>Location</h3>
         <ul class="nav side-menu">
-            <li><a><i class="fa fa-bug"></i> City <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-compass"></i> City <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add City</a></li>
                     <li><a href="#">All Cities</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Location <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-location-arrow"></i> Location <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Location</a></li>
                     <li><a href="#">All Locations</a></li>
                 </ul>
             </li>
-            <li><a><i class="fa fa-bug"></i> Sub Location <span class="fa fa-chevron-down"></span></a>
+            <li><a><i class="fa fa-map-marker"></i> Sub Location <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="#">Add Sub Location</a></li>
                     <li><a href="#">All Sub Locations</a></li>

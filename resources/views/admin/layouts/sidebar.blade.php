@@ -29,8 +29,8 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-crosshairs"></i> Restaurant Types <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Type</a></li>
-                    <li><a href="#">All Types</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-types/create') }}">Add Type</a></li>
+                    <li><a href="{{ url('food-admin/restaurant-types') }}">All Types</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-certificate"></i> Restaurant Categories <span class="fa fa-chevron-down"></span></a>

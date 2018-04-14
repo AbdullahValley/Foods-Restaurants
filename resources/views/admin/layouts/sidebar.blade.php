@@ -156,8 +156,8 @@
             </li>
             <li><a><i class="fa fa-map-marker"></i> Sub Location <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Sub Location</a></li>
-                    <li><a href="#">All Sub Locations</a></li>
+                    <li><a href="{{ url('/food-admin/sub-locations/create') }}">Add Sub Location</a></li>
+                    <li><a href="{{ url('/food-admin/sub-locations') }}">All Sub Locations</a></li>
                 </ul>
             </li>
         </ul>

@@ -40,5 +40,7 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::resource('locations', 'LocationController');
     Route::resource('sub-locations', 'SubLocationController');
     Route::resource('food-courts', 'FoodCourtController');
+    Route::resource('restaurant-comments', 'RestaurantCommentController');
+    Route::resource('food-comments', 'FoodCommentController');
 
 });

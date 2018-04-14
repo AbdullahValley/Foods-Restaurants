@@ -47,8 +47,8 @@
             </li>
             <li><a><i class="fa fa-comment"></i> Restaurant Comments <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Pending Comments</a></li>
-                    <li><a href="#">All Comments</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-comments') }}">Pending Comments</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-comments') }}">All Comments</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-star"></i> Restaurant Facilities <span class="fa fa-chevron-down"></span></a>
@@ -108,8 +108,8 @@
             </li>
             <li><a><i class="fa fa-comments"></i> Food Comments <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Pending Comments</a></li>
-                    <li><a href="#">All Comments</a></li>
+                    <li><a href="{{ url('/food-admin/food-comments') }}">Pending Comments</a></li>
+                    <li><a href="{{ url('/food-admin/food-comments') }}">All Comments</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-apple"></i> Foods <span class="fa fa-chevron-down"></span></a>

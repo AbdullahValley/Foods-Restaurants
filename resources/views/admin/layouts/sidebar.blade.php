@@ -71,8 +71,8 @@
             </li>
             <li><a><i class="fa fa-th-list"></i> Restaurant Compares <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Compare Status</a></li>
-                    <li><a href="#">Top Compares</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-compares') }}">Compare Status</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-compares') }}">Top Compares</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-gratipay"></i> Restaurant Tips <span class="fa fa-chevron-down"></span></a>
@@ -132,8 +132,8 @@
             </li>
             <li><a><i class="fa fa-compress"></i> Food Compares <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Compare Status</a></li>
-                    <li><a href="#">Top Compares</a></li>
+                    <li><a href="{{ url('/food-admin/food-compares') }}">Compare Status</a></li>
+                    <li><a href="{{ url('/food-admin/food-compares') }}">Top Compares</a></li>
                 </ul>
             </li>
         </ul>

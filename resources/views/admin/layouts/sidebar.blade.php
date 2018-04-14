@@ -144,8 +144,8 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-compass"></i> City <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add City</a></li>
-                    <li><a href="#">All Cities</a></li>
+                    <li><a href="{{ url('/food-admin/cities/create') }}">Add City</a></li>
+                    <li><a href="{{ url('/food-admin/cities') }}">All Cities</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-location-arrow"></i> Location <span class="fa fa-chevron-down"></span></a>

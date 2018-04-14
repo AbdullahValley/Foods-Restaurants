@@ -36,5 +36,6 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::resource('food-reviews', 'FoodReviewController');
     Route::resource('food-news', 'FoodNewsController');
     Route::resource('food-recipes', 'FoodRecipeController');
+    Route::resource('cities', 'CityController');
 
 });

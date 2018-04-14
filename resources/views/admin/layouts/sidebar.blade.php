@@ -102,8 +102,8 @@
             </li>
             <li><a><i class="fa fa-registered"></i> Food Reviews <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Review</a></li>
-                    <li><a href="#">All Reviews</a></li>
+                    <li><a href="{{ url('/food-admin/food-reviews/create') }}">Add Review</a></li>
+                    <li><a href="{{ url('/food-admin/food-reviews') }}">All Reviews</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-comments"></i> Food Comments <span class="fa fa-chevron-down"></span></a>

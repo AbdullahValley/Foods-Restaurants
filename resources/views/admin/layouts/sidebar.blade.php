@@ -120,8 +120,8 @@
             </li>
             <li><a><i class="fa fa-file"></i> Food News <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add News</a></li>
-                    <li><a href="#">All News</a></li>
+                    <li><a href="{{ url('/food-admin/food-news/create') }}">Add News</a></li>
+                    <li><a href="{{ url('/food-admin/food-news') }}">All News</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-recycle"></i> Food Recipes <span class="fa fa-chevron-down"></span></a>

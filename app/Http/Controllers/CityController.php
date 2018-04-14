@@ -27,7 +27,7 @@ class CityController extends Controller
         $this->validate($request, [
             'name'          => 'required',
             'display_name'  => 'required',
-            'photo'         => 'mimes:jpeg,png',
+            'avatar'         => 'mimes:jpeg,png',
         ]);
 
         $cities = new City();
@@ -75,7 +75,7 @@ class CityController extends Controller
         $this->validate($request, [
             'name'          => 'required',
             'display_name'  => 'required',
-            'photo'         => 'mimes:jpeg,png',
+            'avatar'         => 'mimes:jpeg,png',
         ]);
 
         $cities = City::find($id);

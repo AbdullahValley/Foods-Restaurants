@@ -4,7 +4,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Edit Restaurant Category</h3>
+                <h3>Edit Restaurant Facility</h3>
             </div>
 
             <div class="title_right">
@@ -24,7 +24,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Restaurant Category
+                        <h2>Restaurant Facility
                             <small>sub title</small>
                         </h2>
                         <ul class="nav navbar-right panel_toolbox">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="x_content">
 
-                        <form action="{{ action('RestaurantCategoryController@update', $restaurant_category->unique_id)  }}"
+                        <form action="{{ action('RestaurantFacilityController@update', $restaurant_facility->unique_id)  }}"
                               method="post" enctype="multipart/form-data" class="form-horizontal form-label-left"
                               novalidate>
                             @csrf
@@ -56,7 +56,7 @@
                             <p>For alternative validation library <code>parsleyJS</code> check out in the <a
                                         href="form.html">form page</a>
                             </p>
-                            <span class="section">Restaurant Category</span>
+                            <span class="section">Restaurant Facility</span>
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name/Slug <span
@@ -64,7 +64,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="name" class="form-control col-md-7 col-xs-12" name="name"
-                                           value="{{ $restaurant_category->name }}" required="required" type="text">
+                                           value="{{ $restaurant_facility->name }}" required="required" type="text">
                                     @if($errors->has('name')) <span
                                             class="text-danger">{{ $errors->first('name') }}</span> @endif
                                 </div>
@@ -75,7 +75,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="email" name="display_name"
-                                           value="{{ $restaurant_category->display_name }}" required="required"
+                                           value="{{ $restaurant_facility->display_name }}" required="required"
                                            class="form-control col-md-7 col-xs-12">
                                     @if($errors->has('display_name')) <span
                                             class="text-danger">{{ $errors->first('display_name') }}</span> @endif
@@ -88,7 +88,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <textarea id="textarea" required="required" name="details"
-                                              class="form-control col-md-7 col-xs-12">{{ $restaurant_category->details }}</textarea>
+                                              class="form-control col-md-7 col-xs-12">{{ $restaurant_facility->details }}</textarea>
                                 </div>
                             </div>
                             <div class="item form-group">
@@ -97,7 +97,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                    <img src="{{ $restaurant_category->avatar ? asset(config('appconfig.imagePath') . $restaurant_category->avatar) : asset('image/avatar.png') }}"
+                                    <img src="{{ $restaurant_facility->avatar ? asset(config('appconfig.imagePath') . $restaurant_facility->avatar) : asset('image/avatar.png') }}"
                                          alt="Type Image" width="80px;">
 
                                     <br><br>
@@ -119,7 +119,7 @@
 
                                         <input type="radio" class="flat" id="active" name="status" value="1"
                                                class="form-control col-md-7 col-xs-12"
-                                               required="required" {{ $restaurant_category->status == 1 ? 'checked' : '' }}>
+                                               required="required" {{ $restaurant_facility->status == 1 ? 'checked' : '' }}>
                                         Active
 
                                     </label>
@@ -128,7 +128,7 @@
 
                                         <input type="radio" class="flat" id="inactive" name="status" value="0"
                                                class="form-control col-md-7 col-xs-12"
-                                               required="required" {{ $restaurant_category->status == 0 ? 'checked' : '' }}>
+                                               required="required" {{ $restaurant_facility->status == 0 ? 'checked' : '' }}>
                                         Inactive
 
                                     </label>

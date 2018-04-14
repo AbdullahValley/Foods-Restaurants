@@ -4,7 +4,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Restaurant Categories <small>Some examples to get you started</small></h3>
+                <h3>Restaurant Facility <small>Some examples to get you started</small></h3>
             </div>
 
             <div class="title_right">
@@ -26,7 +26,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Restaurant Categories<small>Users</small></h2>
+                        <h2>Restaurant Facility<small>Users</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -68,25 +68,25 @@
                             <tbody>
                             @php($sl=1)
 
-                            @foreach($restaurant_categories as $restaurant_category)
+                            @foreach($restaurant_facilities as $restaurant_facility)
                                 <tr>
                                     <td>{{ $sl++ }}</td>
-                                    <td>{{ $restaurant_category->name }}</td>
-                                    <td>{{ $restaurant_category->display_name }}</td>
-                                    <td>{{ $restaurant_category->details }}</td>
+                                    <td>{{ $restaurant_facility->name }}</td>
+                                    <td>{{ $restaurant_facility->display_name }}</td>
+                                    <td>{{ $restaurant_facility->details }}</td>
                                     <td>
 
-                                        <img src="{{ $restaurant_category->avatar ? asset(config('appconfig.imagePath') . $restaurant_category->avatar) : asset('image/avatar.png') }}" alt="User Image" width="80px;">
+                                        <img src="{{ $restaurant_facility->avatar ? asset(config('appconfig.imagePath') . $restaurant_facility->avatar) : asset('image/avatar.png') }}" alt="User Image" width="80px;">
 
                                     </td>
 
-                                    <td>{{ $restaurant_category->status ? "Active" : "Inactive" }}</td>
+                                    <td>{{ $restaurant_facility->status ? "Active" : "Inactive" }}</td>
                                     <td>
 
 
 
-                                        <a href="{{ action('RestaurantCategoryController@edit', $restaurant_category->unique_id) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</a>
-                                        <form action="{{ action('RestaurantCategoryController@destroy', $restaurant_category->unique_id) }}" method="post" style="display: inline">
+                                        <a href="{{ action('RestaurantFacilityController@edit', $restaurant_facility->unique_id) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</a>
+                                        <form action="{{ action('RestaurantFacilityController@destroy', $restaurant_facility->unique_id) }}" method="post" style="display: inline">
                                             @csrf
                                             {{ method_field('DELETE') }}
                                             <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('PERMANENTLY Delete this User. Are you Sure ?')">

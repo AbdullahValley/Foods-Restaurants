@@ -90,8 +90,8 @@
         <ul class="nav side-menu">
             <li><a><i class="fa fa-coffee"></i> Food Courts <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Court</a></li>
-                    <li><a href="#">All Courts</a></li>
+                    <li><a href="{{ url('/food-admin/food-courts/create') }}">Add Court</a></li>
+                    <li><a href="{{ url('/food-admin/food-courts') }}">All Courts</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-object-group"></i> Food Groups <span class="fa fa-chevron-down"></span></a>

@@ -65,8 +65,8 @@
             </li>
             <li><a><i class="fa fa-list-alt"></i> Restaurant News <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add News</a></li>
-                    <li><a href="#">All News</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-news/create') }}">Add News</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-news') }}">All News</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-th-list"></i> Restaurant Compares <span class="fa fa-chevron-down"></span></a>

@@ -31,5 +31,6 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::resource('restaurant-facilities', 'RestaurantFacilityController');
     Route::resource('food-groups', 'FoodGroupController');
     Route::resource('restaurant-reviews', 'RestaurantReviewController');
+    Route::resource('restaurant-news', 'RestaurantNewsController');
 
 });

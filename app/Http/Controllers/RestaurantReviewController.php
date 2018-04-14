@@ -57,7 +57,7 @@ class RestaurantReviewController extends Controller
 
         $restaurant_review->video    = $request->video;
         $restaurant_review->rating   = $request->rating;
-        $restaurant_review->featured = $request->featured == null ? $request->featured = 0 : $request->featured;
+        $restaurant_review->featured = $request->featured == null ? $request->featured = '0' : $request->featured = '1';
         $restaurant_review->status   = $request->status;
 
         $restaurant_review->save();
@@ -111,7 +111,7 @@ class RestaurantReviewController extends Controller
 
         $restaurant_review->video    = $request->video;
         $restaurant_review->rating   = $request->rating;
-        $restaurant_review->featured = $request->featured == null ? $request->featured = 0 : $request->featured;
+        $restaurant_review->featured = $request->featured == null ? $request->featured = '0' : $request->featured = '1';
         $restaurant_review->status   = $request->status;
 
         $restaurant_review->save();

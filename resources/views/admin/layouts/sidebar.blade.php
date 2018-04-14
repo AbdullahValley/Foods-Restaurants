@@ -96,8 +96,8 @@
             </li>
             <li><a><i class="fa fa-object-group"></i> Food Groups <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Group</a></li>
-                    <li><a href="#">All Groups</a></li>
+                    <li><a href="{{ url('/food-admin/food-groups/create') }}">Add Group</a></li>
+                    <li><a href="{{ url('/food-admin/food-groups') }}">All Groups</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-registered"></i> Food Reviews <span class="fa fa-chevron-down"></span></a>

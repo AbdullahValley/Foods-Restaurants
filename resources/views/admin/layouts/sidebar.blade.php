@@ -41,8 +41,8 @@
             </li>
             <li><a><i class="fa fa-tablet"></i> Restaurant Reviews <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Review</a></li>
-                    <li><a href="#">All Reviews</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-reviews/create') }}">Add Review</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-reviews') }}">All Reviews</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-comment"></i> Restaurant Comments <span class="fa fa-chevron-down"></span></a>

@@ -77,8 +77,8 @@
             </li>
             <li><a><i class="fa fa-gratipay"></i> Restaurant Tips <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Tips</a></li>
-                    <li><a href="#">All Tips</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-tips/create') }}">Add Tips</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-tips') }}">All Tips</a></li>
                 </ul>
             </li>
         </ul>

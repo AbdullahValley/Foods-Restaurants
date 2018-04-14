@@ -126,8 +126,8 @@
             </li>
             <li><a><i class="fa fa-recycle"></i> Food Recipes <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Recipe</a></li>
-                    <li><a href="#">All Recipes</a></li>
+                    <li><a href="{{ url('/food-admin/food-recipes/create') }}">Add Recipe</a></li>
+                    <li><a href="{{ url('/food-admin/food-recipes') }}">All Recipes</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-compress"></i> Food Compares <span class="fa fa-chevron-down"></span></a>

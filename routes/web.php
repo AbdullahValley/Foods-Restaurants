@@ -27,5 +27,6 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::patch('users', 'UserController@restore')->name('restore');
 
     Route::resource('restaurant-types', 'RestaurantTypeController');
+    Route::resource('restaurant-categories', 'RestaurantCategoryController');
 
 });

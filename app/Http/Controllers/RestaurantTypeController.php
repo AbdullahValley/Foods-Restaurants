@@ -102,7 +102,7 @@ class RestaurantTypeController extends Controller
 
         $restaurant_type->save();
 
-        return redirect('food-admin/restaurant-types')->with('successMsg', 'The User Updated Successfully!');
+        return redirect('food-admin/restaurant-types')->with('successMsg', 'The Restaurant Type Updated Successfully!');
     }
 
     public function destroy($id)

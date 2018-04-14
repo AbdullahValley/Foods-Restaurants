@@ -4,7 +4,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Edit Restaurant Type</h3>
+                <h3>Edit Restaurant Category</h3>
             </div>
 
             <div class="title_right">
@@ -24,7 +24,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Restaurant Type
+                        <h2>Restaurant Category
                             <small>sub title</small>
                         </h2>
                         <ul class="nav navbar-right panel_toolbox">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="x_content">
 
-                        <form action="{{ action('RestaurantTypeController@update', $restaurant_type->unique_id)  }}"
+                        <form action="{{ action('RestaurantCategoryController@update', $restaurant_type->unique_id)  }}"
                               method="post" enctype="multipart/form-data" class="form-horizontal form-label-left"
                               novalidate>
                             @csrf
@@ -56,7 +56,7 @@
                             <p>For alternative validation library <code>parsleyJS</code> check out in the <a
                                         href="form.html">form page</a>
                             </p>
-                            <span class="section">Restaurant Type</span>
+                            <span class="section">Restaurant Category</span>
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name/Slug <span

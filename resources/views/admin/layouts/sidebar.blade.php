@@ -35,8 +35,8 @@
             </li>
             <li><a><i class="fa fa-certificate"></i> Restaurant Categories <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Category</a></li>
-                    <li><a href="#">All Categories</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-categories/create') }}">Add Category</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-categories') }}">All Categories</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-tablet"></i> Restaurant Reviews <span class="fa fa-chevron-down"></span></a>

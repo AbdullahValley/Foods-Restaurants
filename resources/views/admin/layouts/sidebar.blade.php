@@ -59,8 +59,8 @@
             </li>
             <li><a><i class="fa fa-beer"></i> Restaurants <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Restaurant</a></li>
-                    <li><a href="#">All Restaurants</a></li>
+                    <li><a href="{{ url('/food-admin/restaurants/create') }}">Add Restaurant</a></li>
+                    <li><a href="{{ url('/food-admin/restaurants') }}">All Restaurants</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-list-alt"></i> Restaurant News <span class="fa fa-chevron-down"></span></a>

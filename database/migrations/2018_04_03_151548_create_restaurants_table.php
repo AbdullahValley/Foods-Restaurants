@@ -15,6 +15,8 @@ class CreateRestaurantsTable extends Migration
             $table->string('name')->comment('SEO Slug');
             $table->string('display_name');
             $table->string('details')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->string('photo')->nullable();
             $table->string('facilities')->nullable();
             $table->integer('capacity')->nullable();
@@ -29,6 +31,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('food_court')->nullable();
             $table->string('food_groups')->nullable();
             $table->string('competitors')->nullable();
+            $table->string('video')->nullable();
             $table->string('rating')->nullable();
             $table->string('featured')->default(0)->comment('1=Featured, 0=Non Featured');
             $table->boolean('status')->default(1)->comment('1=Active, 0=Inactive');

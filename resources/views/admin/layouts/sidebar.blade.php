@@ -114,8 +114,8 @@
             </li>
             <li><a><i class="fa fa-apple"></i> Foods <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Add Food</a></li>
-                    <li><a href="#">All Foods</a></li>
+                    <li><a href="{{ url('/food-admin/foods/create') }}">Add Food</a></li>
+                    <li><a href="{{ url('/food-admin/foods') }}">All Foods</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-file"></i> Food News <span class="fa fa-chevron-down"></span></a>

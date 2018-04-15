@@ -25,6 +25,7 @@ class CreateFoodsTable extends Migration
             $table->string('food_court')->nullable();
             $table->string('food_groups')->nullable();
             $table->string('competitors')->nullable();
+            $table->string('video')->nullable();
             $table->string('rating')->nullable();
             $table->string('featured')->default(0)->comment('1=Featured, 0=Non Featured');
             $table->boolean('status')->default(1)->comment('1=Active, 0=Inactive');

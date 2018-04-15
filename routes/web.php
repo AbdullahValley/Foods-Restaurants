@@ -45,5 +45,6 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::resource('restaurant-compares', 'RestaurantCompareController');
     Route::resource('food-compares', 'FoodCompareController');
     Route::resource('restaurants', 'RestaurantController');
+    Route::resource('foods', 'FoodController');
 
 });

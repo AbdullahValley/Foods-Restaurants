@@ -6,23 +6,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Colorlib">
+    <meta name="author" content="#">
     <meta name="description" content="#">
     <meta name="keywords" content="#">
     <!-- Page Title -->
     <title>Food & Restaurant by Abdullah Al Noman</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
     <!-- Simple line Icon -->
-    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <link rel="stylesheet" href="{{ asset('front-end/css/simple-line-icons.css') }}">
     <!-- Themify Icon -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('front-end/css/themify-icons.css') }}">
     <!-- Hover Effects -->
-    <link rel="stylesheet" href="css/set1.css">
+    <link rel="stylesheet" href="{{ asset('front-end/css/set1.css') }}">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('front-end/css/style.css') }}">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html">Listing</a>
+                        <a class="navbar-brand" href="index.html">Abdullah Food</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-menu"></span>
                         </button>
@@ -78,7 +78,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Blog</a>
                                 </li>
-                                <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Listing</a></li>
+                                <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Restaurant</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -97,8 +97,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="slider-content_wrap">
-                                <h1>Discover great places in New york</h1>
-                                <h5>Let's uncover the best places to eat, drink, and shop nearest to you.</h5>
+                                <h1>Discover restaurants in Dhaka</h1>
+                                <h5>Let's uncover the best food to eat, drink, and shop nearest to you.</h5>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                             <form class="form-wrap mt-4">
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <input type="text" placeholder="What are your looking for?" class="btn-group1">
-                                    <input type="text" placeholder="New york" class="btn-group2">
+                                    <input type="text" placeholder="Dhaka" class="btn-group2">
                                     <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH<i class="pe-7s-angle-right"></i></button>
                                 </div>
                             </form>
@@ -138,9 +138,9 @@
                 <div class="find-place-img_wrap">
                     <div class="grid">
                         <figure class="effect-ruby">
-                            <img src="images/find-place1.jpg" class="img-fluid" alt="img13" />
+                            <img src="{{ asset('front-end/images/find-place1.jpg') }}" class="img-fluid" alt="img13" />
                             <figcaption>
-                                <h5>Nightlife </h5>
+                                <h5>Ice Cream </h5>
                                 <p>385 Listings</p>
                             </figcaption>
                         </figure>
@@ -153,7 +153,7 @@
                         <div class="find-place-img_wrap">
                             <div class="grid">
                                 <figure class="effect-ruby">
-                                    <img src="images/find-place2.jpg" class="img-fluid" alt="img13" />
+                                    <img src="{{ asset('front-end/images/find-place2.jpg') }}" class="img-fluid" alt="img13" />
                                     <figcaption>
                                         <h5>Restaurants</h5>
                                         <p>210 Listings</p>
@@ -168,9 +168,9 @@
                         <div class="find-place-img_wrap">
                             <div class="grid">
                                 <figure class="effect-ruby">
-                                    <img src="images/find-place3.jpg" class="img-fluid" alt="img13" />
+                                    <img src="{{ asset('front-end/images/find-place3.jpg') }}" class="img-fluid" alt="img13" />
                                     <figcaption>
-                                        <h5>Outdoors </h5>
+                                        <h5>Biryani </h5>
                                         <p>114 Listings</p>
                                     </figcaption>
                                 </figure>
@@ -185,7 +185,7 @@
                         <div class="find-place-img_wrap">
                             <div class="grid">
                                 <figure class="effect-ruby">
-                                    <img src="images/find-place4.jpg" class="img-fluid" alt="img13" />
+                                    <img src="{{ asset('front-end/images/find-place4.jpg') }}" class="img-fluid" alt="img13" />
                                     <figcaption>
                                         <h5>Hotels </h5>
                                         <p>577 Listings</p>
@@ -200,9 +200,9 @@
                         <div class="find-place-img_wrap">
                             <div class="grid">
                                 <figure class="effect-ruby">
-                                    <img src="images/find-place5.jpg" class="img-fluid" alt="img13" />
+                                    <img src="{{ asset('front-end/images/find-place5.jpg') }}" class="img-fluid" alt="img13" />
                                     <figcaption>
-                                        <h5>Art & Culture </h5>
+                                        <h5>Fast Food </h5>
                                         <p>79 Listings</p>
                                     </figcaption>
                                 </figure>
@@ -229,7 +229,7 @@
             <div class="col-md-4 featured-responsive">
                 <div class="featured-place-wrap">
                     <a href="detail.html">
-                        <img src="images/featured1.jpg" class="img-fluid" alt="#">
+                        <img src="{{ asset('front-end/images/featured1.jpg') }}" class="img-fluid" alt="#">
                         <span class="featured-rating-orange">6.5</span>
                         <div class="featured-title-box">
                             <h6>Burger & Lobster</h6>
@@ -260,7 +260,7 @@
             <div class="col-md-4 featured-responsive">
                 <div class="featured-place-wrap">
                     <a href="detail.html">
-                        <img src="images/featured2.jpg" class="img-fluid" alt="#">
+                        <img src="{{ asset('front-end/images/featured2.jpg') }}" class="img-fluid" alt="#">
                         <span class="featured-rating-green">9.5</span>
                         <div class="featured-title-box">
                             <h6>Joe’s Shanghai</h6>
@@ -291,7 +291,7 @@
             <div class="col-md-4 featured-responsive">
                 <div class="featured-place-wrap">
                     <a href="detail.html">
-                        <img src="images/featured3.jpg" class="img-fluid" alt="#">
+                        <img src="{{ asset('front-end/images/featured3.jpg') }}" class="img-fluid" alt="#">
                         <span class="featured-rating">3.2</span>
                         <div class="featured-title-box">
                             <h6>Tasty Hand-Pulled Noodles</h6>
@@ -355,7 +355,7 @@
                                         </g>
                                     </g>
                                 </g></g> </svg>
-                        <h6>Automotive</h6>
+                        <h6>Khichuri</h6>
                     </div>
                 </a>
             </div>
@@ -376,7 +376,7 @@
                                         <path d="M382.123,156.107c-2.517-5.355-9.728-7.189-15.04-4.715c-81.813,38.464-122.005,105.536-140.267,174.485    c-22.592-146.603-87.936-191.296-115.648-210.261c-3.456-2.368-6.144-4.096-7.637-5.568c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.16-4.16,10.923,0,15.083c2.112,2.091,5.76,4.715,10.688,8.085c31.232,21.355,114.197,78.123,114.197,304.363    c0,5.888,4.779,10.667,10.667,10.667s10.667-4.779,10.667-10.645c0-91.413,24.555-211.925,141.504-266.88    c0-0.021,1.728-0.832,1.728-0.832C383.211,167.371,384.64,161.44,382.123,156.107z" data-original="#000000" class="active-path" data-old_color="#ff3a6d" fill="#ff3a6d"/>
                                     </g>
                                 </g></g> </svg>
-                        <h6>Beauty & Spa</h6>
+                        <h6>Sushi</h6>
                     </div>
                 </a>
             </div>
@@ -441,7 +441,7 @@
                                     <path d="M20,25c0,0.553,0.448,1,1,1s1-0.447,1-1c0-2.206-1.794-4-4-4s-4,1.794-4,4c0,0.553,0.448,1,1,1s1-0.447,1-1   c0-1.103,0.897-2,2-2S20,23.897,20,25z" data-original="#000000" class="active-path" data-old_color="#ff3a6d" fill="#ff3a6d"/>
                                     <path d="M42,21c-2.206,0-4,1.794-4,4c0,0.553,0.448,1,1,1s1-0.447,1-1c0-1.103,0.897-2,2-2s2,0.897,2,2c0,0.553,0.448,1,1,1   s1-0.447,1-1C46,22.794,44.206,21,42,21z" data-original="#000000" class="active-path" data-old_color="#ff3a6d" fill="#ff3a6d"/>
                                 </g></g> </svg>
-                        <h6>Shopping</h6>
+                        <h6>Chinese</h6>
                     </div>
                 </a>
             </div>
@@ -513,7 +513,7 @@
     </div>
 </section>
 <!--//END CATEGORIES -->
-<!--============================= ADD LISTING =============================-->
+<!--============================= ADD RESTAURANT =============================-->
 <section class="main-block light-bg">
     <div class="container">
         <div class="row">
@@ -527,13 +527,13 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="featured-btn-wrap">
-                    <a href="#" class="btn btn-danger"><span class="ti-plus"></span> ADD LISTING</a>
+                    <a href="#" class="btn btn-danger"><span class="ti-plus"></span> ADD RESTAURANT</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--//END ADD LISTING -->
+<!--//END ADD RESTAURANT -->
 <!--============================= FOOTER =============================-->
 <footer class="main-block dark-bg">
     <div class="container">
@@ -560,9 +560,9 @@
 
 <!-- jQuery, Bootstrap JS. -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('front-end/js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('front-end/js/popper.min.js') }}"></script>
+<script src="{{ asset('front-end/js/bootstrap.min.js') }}"></script>
 
 <script>
     $(window).scroll(function() {

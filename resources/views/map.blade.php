@@ -18,7 +18,7 @@
                         </div>
                     @endif
 
-                    import here ::: google map
+                        <iframe src="https://www.google.com/maps/d/embed?mid=149iNJ4srL__vJx9IS7sxHgQDK_9Fhci6" width="100%" height="700"></iframe>
 
                 </div>
 

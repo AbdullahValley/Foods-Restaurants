@@ -77,7 +77,7 @@
                                 <a class="nav-link" href="#">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <a class="nav-link" target="_blank" href="{{ url('/map') }}">Maps</a>
                             </li>
                             <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Restaurant</a></li>
                         </ul>
@@ -253,7 +253,7 @@
                                 <img src="{{ asset('front-end/images/featured3.jpg') }}" class="img-fluid" alt="#">
                                 <span class="featured-rating">3.2</span>
                                 <div class="featured-title-box">
-                                    <h6>Tasty Hand-Pulled Noodles</h6>
+                                    <h6>KFC Mirpur Dhaka</h6>
                                     <p>Restaurant </p> <span>• </span>
                                     <p>3 Reviews</p> <span> • </span>
                                     <p><span>$$$</span>$$</p>
@@ -265,7 +265,7 @@
                                             <p>+44 20 7336 8898</p>
                                         </li>
                                         <li><span class="icon-link"></span>
-                                            <p>https://burgerandlobster.com</p>
+                                            <p>https://dhakarestaurant.com</p>
                                         </li>
 
                                     </ul>
@@ -385,6 +385,7 @@
 </script>
 <!-- Map JS (Please change the API key below. Read documentation for more info) -->
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyDMTUkJAmi1ahsx9uCGSgmcSmqDTBF9ygg"></script>
+
 </body>
 
 </html>

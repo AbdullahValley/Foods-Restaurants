@@ -49,7 +49,7 @@
                                     <a class="nav-link" href="#">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link" target="_blank" href="{{ url('/map') }}">Maps</a>
                                 </li>
                                 <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Restaurant</a></li>
                             </ul>

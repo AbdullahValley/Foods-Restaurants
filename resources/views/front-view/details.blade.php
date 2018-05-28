@@ -81,7 +81,7 @@
                                 <a class="nav-link" href="#">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <a class="nav-link" target="_blank" href="{{ url('/map') }}">Maps</a>
                             </li>
                             <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Restaurant</a></li>
                         </ul>
@@ -142,7 +142,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h5>Tasty Hand-Pulled Noodles</h5>
+                <h5>Mirpur Cafe & Restaurant</h5>
                 <p><span>$$$</span>$$</p>
                 <p class="reserve-description">Innovative cooking, paired with fine wines in a modern setting.</p>
             </div>

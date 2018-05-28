@@ -1,7 +1,15 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front-view/layouts/app');
+});
+
+Route::get('/details', function () {
+    return view('front-view/details');
+});
+
+Route::get('/restaurants', function () {
+    return view('front-view/restaurants');
 });
 
 Route::get('/map', function () {

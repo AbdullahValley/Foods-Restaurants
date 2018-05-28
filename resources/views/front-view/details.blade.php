@@ -339,7 +339,7 @@
             <div class="col-md-12">
                 <div class="copyright">
 
-                    <p><p>Copyright &copy; 2018 Abdullah-Al-Noman.</p></p>
+                    <p>Copyright &copy; 2018 Abdullah-Al-Noman.</p>
 
                     <ul>
                         <li><a href="#"><span class="ti-facebook"></span></a></li>

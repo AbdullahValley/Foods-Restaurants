@@ -173,6 +173,42 @@
             <div class="col-md-8 responsive-wrap">
                 <div class="booking-checkbox_wrap">
                     <div class="booking-checkbox">
+
+        <marquee onMouseOut=this.start(); onMouseOver=this.stop(); scrollamount='2' scrolldelay='30'
+                 truespeed="truespeed">
+
+
+            <a href="#">
+                <img src="{{ asset('front-end/images/featured1.jpg') }}" width="200px" height="200px"
+                     class="img-fluid" alt="#">
+                Kabab
+                <span>$</span> 290
+
+            </a>
+            <a href="#">
+                <img src="{{ asset('front-end/images/featured2.jpg') }}" width="200px" height="200px"
+                     class="img-fluid" alt="#">
+                Pasta
+                <span>$</span> 490
+
+            </a>
+            <a href="#">
+                <img src="{{ asset('front-end/images/featured3.jpg') }}" width="200px" height="200px"
+                     class="img-fluid" alt="#">
+                Burger
+                <span>$</span> 300
+
+            </a>
+            <a href="#">
+                <img src="{{ asset('front-end/images/featured4.jpg') }}" width="200px" height="200px"
+                     class="img-fluid" alt="#">
+                Pizza
+                <span>$</span> 100
+
+            </a>
+
+        </marquee>
+
                         <p>Tasty Hand-Pulled Noodles is a 1950s style diner located in Madison, Wisconsin. Opened in 1946 by Mickey Weidman, and located just across the street from Camp Randall Stadium, it has become a popular game day tradition amongst
                             many Badger fans. The diner is well known for its breakfast selections, especially the Scrambler, which is a large mound of potatoes, eggs, cheese, gravy, and a patrons’ choice of other toppings.</p>
                         <p>Mickies has also been featured on “Todd’s Taste of the Town” during one of ESPN’s college football broadcasts. We are one of the best Chinese restaurants in the New York, New York area. We have been recognized for our outstanding

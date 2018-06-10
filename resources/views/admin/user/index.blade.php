@@ -95,7 +95,7 @@
                                             <input type="hidden" name="status" value="0">
                                             <input type="hidden" name="id" value="{{ $user->id }}">
 
-                                            <button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete this user ?')">
+                                            <button type="submit" class="btn btn-danger btn-xs" ="return confirm('Are you sure to delete this user ?')">
                                                 <i class="fa fa-trash-o"> Delete</i>
                                             </button>
                                         </form>

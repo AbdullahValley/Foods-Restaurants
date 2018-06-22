@@ -258,6 +258,15 @@
             <div class="col-md-5">
                 <div class="styled-heading">
                     <h3>Browse Categories</h3>
+
+                    {{ 'test' }}
+
+                    @foreach($restaurant_categories as $restaurant_category)
+                        {{ $restaurant_category->display_name }}
+                    @endforeach
+
+
+
                 </div>
             </div>
         </div>

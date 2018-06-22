@@ -4,6 +4,11 @@ Route::get('/', function () {
     return view('front-view/layouts/app');
 });
 
+// This route is for welcome page category show ...
+
+Route::get('/', 'FrontRestaurantCategoryController@index');
+
+
 Route::get('/details', function () {
     return view('front-view/details');
 });
@@ -58,5 +63,6 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::resource('food-compares', 'FoodCompareController');
     Route::resource('restaurants', 'RestaurantController');
     Route::resource('foods', 'FoodController');
+
 
 });

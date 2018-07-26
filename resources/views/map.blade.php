@@ -7,7 +7,6 @@
             <div class="card">
                 <div class="card-header">
 
-<<<<<<< HEAD
                     @if (Route::has('login'))
                         <div class="pull-right">
                             @auth
@@ -19,10 +18,6 @@
                              @endauth
                         </div>
                     @endif
-=======
-                    Location Map based on My Users
->>>>>>> 15ab652310313fa9d63488ac80b049988e635fc2
-
                 </div>
 
                 <div class="card-body">
@@ -32,11 +27,8 @@
                         </div>
                     @endif
 
-<<<<<<< HEAD
                     You are logged in!
-=======
                         <iframe src="https://www.google.com/maps/d/embed?mid=149iNJ4srL__vJx9IS7sxHgQDK_9Fhci6" width="100%" height="700"></iframe>
->>>>>>> 15ab652310313fa9d63488ac80b049988e635fc2
 
                 </div>
 

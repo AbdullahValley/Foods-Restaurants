@@ -11,9 +11,20 @@ Route::get('/restaurant-categories/{id}', 'WelcomeController@get_category_name')
 Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_name');
 
 
+Route::get('/about', function () {
+    return 'About Us';
+});
+
+
+Route::get('/contact', function () {
+    return 'Contact Us';
+});
+
+
 Route::get('/details', function () {
     return view('front-view/details');
 });
+
 
 Route::get('/restaurants', function () {
     return view('front-view/restaurants');

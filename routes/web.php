@@ -25,15 +25,6 @@ Route::get('/contact', function () {
 });
 
 
-Route::get('/details', function () {
-    return view('front-view/details');
-});
-
-
-Route::get('/restaurants', function () {
-    return view('front-view/restaurants');
-});
-
 Route::get('/map', function () {
     return view('map');
 });

@@ -161,40 +161,40 @@
                 <div class="booking-checkbox_wrap">
                     <div class="booking-checkbox">
 
-        <marquee onMouseOut=this.start(); onMouseOver=this.stop(); scrollamount='2' scrolldelay='30'
-                 truespeed="truespeed">
+                        <marquee onMouseOut=this.start(); onMouseOver=this.stop(); scrollamount='2' scrolldelay='30'
+                                 truespeed="truespeed">
 
 
-            <a href="#">
-                <img src="{{ asset('front-end/images/featured1.jpg') }}" width="200px" height="200px"
-                     class="img-fluid" alt="#">
-                Kabab
-                <span>$</span> 290
+                            <a href="#">
+                                <img src="{{ asset('front-end/images/featured1.jpg') }}" width="200px" height="200px"
+                                     class="img-fluid" alt="#">
+                                Kabab
+                                <span>$</span> 290
 
-            </a>
-            <a href="#">
-                <img src="{{ asset('front-end/images/featured2.jpg') }}" width="200px" height="200px"
-                     class="img-fluid" alt="#">
-                Pasta
-                <span>$</span> 490
+                            </a>
+                            <a href="#">
+                                <img src="{{ asset('front-end/images/featured2.jpg') }}" width="200px" height="200px"
+                                     class="img-fluid" alt="#">
+                                Pasta
+                                <span>$</span> 490
 
-            </a>
-            <a href="#">
-                <img src="{{ asset('front-end/images/featured3.jpg') }}" width="200px" height="200px"
-                     class="img-fluid" alt="#">
-                Burger
-                <span>$</span> 300
+                            </a>
+                            <a href="#">
+                                <img src="{{ asset('front-end/images/featured3.jpg') }}" width="200px" height="200px"
+                                     class="img-fluid" alt="#">
+                                Burger
+                                <span>$</span> 300
 
-            </a>
-            <a href="#">
-                <img src="{{ asset('front-end/images/featured4.jpg') }}" width="200px" height="200px"
-                     class="img-fluid" alt="#">
-                Pizza
-                <span>$</span> 100
+                            </a>
+                            <a href="#">
+                                <img src="{{ asset('front-end/images/featured4.jpg') }}" width="200px" height="200px"
+                                     class="img-fluid" alt="#">
+                                Pizza
+                                <span>$</span> 100
 
-            </a>
+                            </a>
 
-        </marquee>
+                        </marquee>
 
                         <p>Tasty Hand-Pulled Noodles is a 1950s style diner located in Madison, Wisconsin. Opened in 1946 by Mickey Weidman, and located just across the street from Camp Randall Stadium, it has become a popular game day tradition amongst
                             many Badger fans. The diner is well known for its breakfast selections, especially the Scrambler, which is a large mound of potatoes, eggs, cheese, gravy, and a patrons’ choice of other toppings.</p>
@@ -331,21 +331,21 @@
                 <div class="follow">
                     <div class="follow-img">
                         <img src="{{ asset('front-end/images/follow-img.jpg') }}" class="img-fluid" alt="#">
-                        <h6>Christine Evans</h6>
-                        <span>New York</span>
+                        <h6>Abdullah</h6>
+                        <span>Dhaka</span>
                     </div>
                     <ul class="social-counts">
                         <li>
-                            <h6>26</h6>
+                            <h6>05</h6>
                             <span>Listings</span>
                         </li>
                         <li>
-                            <h6>326</h6>
+                            <h6>10</h6>
                             <span>Followers</span>
                         </li>
                         <li>
                             <h6>12</h6>
-                            <span>Followers</span>
+                            <span>Fans</span>
                         </li>
                     </ul>
                     <a href="#">FOLLOW</a>

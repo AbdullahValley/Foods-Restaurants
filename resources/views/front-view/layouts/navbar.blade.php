@@ -38,7 +38,20 @@
                                     <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
                                 </li>
 
-                                <li><a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Restaurant</a></li>
+                                <li>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-outline-light top-b" data-toggle="modal" data-target="#exampleModal">
+                                        <span class="ti-plus"></span>
+                                        Add Restaurant
+                                    </button>
+
+                                    {{--<a href="#" class="btn btn-outline-light top-btn"><span class="ti-plus"></span> Add Restaurant</a>--}}
+
+                                </li>
+
+
+
                             </ul>
                         </div>
                     </nav>

@@ -76,7 +76,7 @@
                                     <td>{{ $restaurant_type->details }}</td>
                                     <td>
 
-                                        <img src="{{ $restaurant_type->avatar ? asset(config('appconfig.imagePath') . $restaurant_type->avatar) : asset('image/avatar.png') }}" alt="User Image" width="80px;">
+                                        <img src="{{ $restaurant_type->avatar ? asset(config('appconfig.imagePath') . $restaurant_type->avatar) : asset('uploads/image/no-photo.png') }}" alt="User Image" width="80px;">
 
                                     </td>
 

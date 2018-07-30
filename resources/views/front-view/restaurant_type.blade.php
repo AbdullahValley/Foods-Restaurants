@@ -83,7 +83,7 @@
                 <div class="row detail-filter-wrap">
                     <div class="col-md-4 featured-responsive">
                         <div class="detail-filter-text">
-                            <p>14 Results For <span>{{ $restaurant_category->display_name }}</span></p>
+                            <p>14 Results For <span>{{ $restaurant_type->display_name }}</span></p>
                         </div>
                     </div>
                     <div class="col-md-8 featured-responsive">
@@ -172,7 +172,6 @@
                 </div>
                 <div class="row light-bg detail-options-wrap">
 
-
                     @foreach($restaurants as $restaurant)
                         <div class="col-sm-6 col-lg-12 col-xl-6 featured-responsive">
                             <div class="featured-place-wrap">
@@ -217,7 +216,6 @@
                             </div>
                         </div>
                     @endforeach
-
 
 
 

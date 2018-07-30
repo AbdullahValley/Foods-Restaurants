@@ -12,6 +12,7 @@ Route::resource('/restaurant-list/', 'FrontRestaurantController');
 
 Route::get('/restaurant-categories/{id}', 'WelcomeController@get_category_name');
 Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_name');
+Route::get('/restaurant-types/{id}', 'WelcomeController@get_restaurant_type');
 
 
 Route::get('/about', function () {

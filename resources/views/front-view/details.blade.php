@@ -86,11 +86,24 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-                <a href="{{ asset('front-end/images/reserve-slide2.jpg') }}" class="grid image-link">
-                    <img src="{{ asset('front-end/images/reserve-slide2.jpg') }}" class="img-fluid" alt="#">
+                <a href="{{ $restaurants->photo ? asset('uploads/image/'.$restaurants->photo) : asset('uploads/image/default-restaurant.png') }}" class="grid image-link">
+                    <img src="{{ $restaurants->photo ? asset('uploads/image/'.$restaurants->photo) : asset('uploads/image/default-restaurant.png') }}" class="img-fluid" alt="#">
                 </a>
             </div>
+
             <div class="swiper-slide">
+                <a href="{{ $restaurants->photo ? asset('uploads/image/'.$restaurants->photo) : asset('uploads/image/default-restaurant.png') }}" class="grid image-link">
+                    <img src="{{ $restaurants->photo ? asset('uploads/image/'.$restaurants->photo) : asset('uploads/image/default-restaurant.png') }}" class="img-fluid" alt="#">
+                </a>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="{{ $restaurants->photo ? asset('uploads/image/'.$restaurants->photo) : asset('uploads/image/default-restaurant.png') }}" class="grid image-link">
+                    <img src="{{ $restaurants->photo ? asset('uploads/image/'.$restaurants->photo) : asset('uploads/image/default-restaurant.png') }}" class="img-fluid" alt="#">
+                </a>
+            </div>
+
+{{--            <div class="swiper-slide">
                 <a href="{{ asset('front-end/images/reserve-slide1.jpg') }}" class="grid image-link">
                     <img src="{{ asset('front-end/images/reserve-slide1.jpg') }}" class="img-fluid" alt="#">
                 </a>
@@ -100,7 +113,9 @@
                     <img src="{{ asset('front-end/images/reserve-slide3.jpg') }}" class="img-fluid" alt="#">
                 </a>
             </div>
-            <div class="swiper-slide">
+--}}
+
+            {{--<div class="swiper-slide">
                 <a href="{{ asset('front-end/images/reserve-slide1.jpg') }}" class="grid image-link">
                     <img src="{{ asset('front-end/images/reserve-slide1.jpg') }}" class="img-fluid" alt="#">
                 </a>
@@ -114,7 +129,7 @@
                 <a href="{{ asset('front-end/images/reserve-slide3.jpg') }}" class="grid image-link">
                     <img src="{{ asset('front-end/images/reserve-slide3.jpg') }}" class="img-fluid" alt="#">
                 </a>
-            </div>
+            </div>--}}
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination swiper-pagination-white"></div>
@@ -136,7 +151,7 @@
             <div class="col-md-6">
                 <div class="reserve-seat-block">
                     <div class="reserve-rating">
-                        <span>9.5</span>
+                        <span>{{ $restaurants->rating }}</span>
                     </div>
                     <div class="review-btn">
                         <a href="#" class="btn btn-outline-danger">WRITE A REVIEW</a>
@@ -245,13 +260,13 @@
                     <div class="customer-review_wrap">
                         <div class="customer-img">
                             <img src="{{ asset('front-end/images/customer-img1.jpg') }}" class="img-fluid" alt="#">
-                            <p>Amanda G</p>
+                            <p>TM Nabil</p>
                             <span>35 Reviews</span>
                         </div>
                         <div class="customer-content-wrap">
                             <div class="customer-content">
                                 <div class="customer-review">
-                                    <h6>Best noodles in the Newyork city</h6>
+                                    <h6>Best noodles in the Dhaka city</h6>
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -281,7 +296,7 @@
                     <div class="customer-review_wrap">
                         <div class="customer-img">
                             <img src="{{ asset('front-end/images/customer-img2.jpg') }}" class="img-fluid" alt="#">
-                            <p>Kevin W</p>
+                            <p>Maruf</p>
                             <span>17 Reviews</span>
                         </div>
                         <div class="customer-content-wrap">
@@ -311,15 +326,15 @@
                     <img src="{{ asset('front-end/images/map.jpg') }}" class="img-fluid" alt="#">
                     <div class="address">
                         <span class="icon-location-pin"></span>
-                        <p> Doyers St<br> New York, NY 10013<br> b/t Division St & St James Pl <br> Chinatown, Civic Center</p>
+                        <p> Dhanmondi<br> Dhaka<br> Basundhara City <br> Panthapath</p>
                     </div>
                     <div class="address">
                         <span class="icon-screen-smartphone"></span>
-                        <p> +44 20 7336 8898</p>
+                        <p> +88 017 31 21 11 41</p>
                     </div>
                     <div class="address">
                         <span class="icon-link"></span>
-                        <p>https://burgerandlobster.com</p>
+                        <p>http://hello-food.com</p>
                     </div>
                     <div class="address">
                         <span class="icon-clock"></span>

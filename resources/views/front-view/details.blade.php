@@ -59,7 +59,7 @@
                                                             </li>
                             --}}
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ url('/restaurants') }}">All Restaurants</a>
+                                <a class="nav-link" href="{{ url('/restaurant-list') }}">All Restaurants</a>
                             </li>
 
                             <li class="nav-item active">

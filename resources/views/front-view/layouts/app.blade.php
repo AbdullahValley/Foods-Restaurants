@@ -25,7 +25,7 @@
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-10">
-                            <form class="form-wrap mt-4">
+                            <form class="form-wrap mt-4" action="{{ url('/restaurant-list') }}">
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <input type="text" placeholder="What are your looking for?" class="btn-group1">
                                     <input type="text" placeholder="Dhaka" class="btn-group2">
@@ -33,7 +33,7 @@
                                 </div>
                             </form>
                             <div class="slider-link">
-                                <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Addred</a>
+                                <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
                             </div>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="featured-btn-wrap">
-                    <a href="{{ url('/restaurants') }}" class="btn btn-danger">VIEW ALL</a>
+                    <a href="{{ url('/restaurant-list') }}" class="btn btn-danger">VIEW ALL</a>
                 </div>
             </div>
         </div>

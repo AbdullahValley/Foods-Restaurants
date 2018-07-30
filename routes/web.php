@@ -7,6 +7,9 @@ Route::get('/', function () {
 // These routes is for welcome page category show ...
 
 Route::resource('/', 'WelcomeController');
+
+Route::resource('/restaurant-list/', 'FrontRestaurantController');
+
 Route::get('/restaurant-categories/{id}', 'WelcomeController@get_category_name');
 Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_name');
 

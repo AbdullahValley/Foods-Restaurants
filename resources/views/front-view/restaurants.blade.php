@@ -353,39 +353,6 @@
 <script src="{{ asset('front-end/js/bootstrap.min.js') }}"></script>
 
 
-<script>
-    $(".map-icon").click(function() {
-        $(".map-fix").toggle();
-    });
-</script>
-<script>
-    // Want to customize colors? go to snazzymaps.com
-    function myMap() {
-        var maplat = $('#map').data('lat');
-        var maplon = $('#map').data('lon');
-        var mapzoom = $('#map').data('zoom');
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-            center: {
-                lat: maplat,
-                lng: maplon
-            },
-            zoom: mapzoom,
-            scrollwheel: false
-        });
-        var marker = new google.maps.Marker({
-            position: {
-                lat: maplat,
-                lng: maplon
-            },
-            map: map,
-            title: 'We are here!'
-        });
-    }
-</script>
-<!-- Map JS (Please change the API key below. Read documentation for more info) -->
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyDMTUkJAmi1ahsx9uCGSgmcSmqDTBF9ygg"></script>
-
 </body>
 
 </html>

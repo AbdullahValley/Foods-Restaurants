@@ -4,9 +4,11 @@ Route::get('/', function () {
     return view('front-view/layouts/app');
 });
 
-// This route is for welcome page category show ...
+// These routes is for welcome page category show ...
 
-Route::get('/', 'FrontRestaurantCategoryController@index');
+Route::resource('/', 'WelcomeController');
+Route::get('/restaurant-categories/{id}', 'WelcomeController@get_category_name');
+Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_name');
 
 
 Route::get('/details', function () {
@@ -20,8 +22,6 @@ Route::get('/restaurants', function () {
 Route::get('/map', function () {
     return view('map');
 });
-
-Route::get('/restaurant-categories/{id}', 'FrontRestaurantCategoryController@get_category_name');
 
 
 Auth::routes();

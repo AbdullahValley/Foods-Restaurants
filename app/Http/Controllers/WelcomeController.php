@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Restaurant;
 use App\RestaurantCategory;
+use Illuminate\Http\Request;
 
-class FrontRestaurantCategoryController extends Controller
+class WelcomeController extends Controller
 {
+
     public function index()
     {
         $restaurant_categories = RestaurantCategory::orderBy('id', 'desc')->limit(8)->where('status', 1)->get();
-        return view('front-view.layouts.app', compact('restaurant_categories'));
+
+        $restaurants = Restaurant::orderBy('id', 'desc')->limit(3)->where('status', 1)->get();
+
+        return view('front-view.layouts.app', compact('restaurant_categories', 'restaurants'));
     }
 
 
@@ -20,9 +25,11 @@ class FrontRestaurantCategoryController extends Controller
         return view('front-view.restaurant_category', compact('restaurant_category'));
     }
 
-    public function create()
+
+    public function get_restaurant_name($id)
     {
-        //
+        $restaurants = Restaurant::find($id);
+        return view('front-view.details', compact('restaurants'));
     }
 
     public function store(Request $request)
@@ -47,7 +54,6 @@ class FrontRestaurantCategoryController extends Controller
     {
         //
     }
-
 
     public function destroy($id)
     {

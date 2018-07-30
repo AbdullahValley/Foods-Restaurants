@@ -78,7 +78,7 @@
                                     <td>{{ $restaurant->capacity }}</td>
                                     <td>
 
-                                        <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Review Image" width="80px;">
+                                        <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('uploads/image/default-restaurant.png') }}" alt="Review Image" width="80px;">
 
                                     </td>
 

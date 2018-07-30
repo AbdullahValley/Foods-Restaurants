@@ -12,7 +12,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Food & Restaurant by Abdullah Al Noman</title>
+    <title>{{ $restaurants->display_name }} || Food & Restaurant by Abdullah Al Noman</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="./">Abdullah Food</a>
+                    <a class="navbar-brand" href="../">Abdullah Food</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-menu"></span>
                     </button>
@@ -142,7 +142,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h5>Mirpur Cafe & Restaurant</h5>
+                <h5>{{ $restaurants->display_name }}</h5>
                 <p><span>$$$</span>$$</p>
                 <p class="reserve-description">Innovative cooking, paired with fine wines in a modern setting.</p>
             </div>

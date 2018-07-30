@@ -21,6 +21,8 @@ Route::get('/map', function () {
     return view('map');
 });
 
+Route::get('/restaurant-categories/{id}', 'FrontRestaurantCategoryController@get_category_name');
+
 
 Auth::routes();
 

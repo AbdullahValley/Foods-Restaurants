@@ -9,10 +9,16 @@ class FrontRestaurantCategoryController extends Controller
 {
     public function index()
     {
-        $restaurant_categories = RestaurantCategory::orderBy('id', 'desc')->get();
-        return view ('front-view.layouts.app', compact('restaurant_categories'));
+        $restaurant_categories = RestaurantCategory::orderBy('id', 'desc')->limit(8)->where('status', 1)->get();
+        return view('front-view.layouts.app', compact('restaurant_categories'));
     }
 
+
+    public function get_category_name($id)
+    {
+        $restaurant_category = RestaurantCategory::find($id);
+        return view('front-view.restaurant_category', compact('restaurant_category'));
+    }
 
     public function create()
     {

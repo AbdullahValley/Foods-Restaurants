@@ -155,7 +155,7 @@
                     </div>
                     <div class="review-btn">
                         <a href="#" class="btn btn-outline-danger">WRITE A REVIEW</a>
-                        <span>34 reviews</span>
+                        <span>0 reviews</span>
                     </div>
                     <div class="reserve-btn">
                         <div class="featured-btn-wrap">
@@ -211,11 +211,8 @@
 
                         </marquee>
 
-                        <p>Tasty Hand-Pulled Noodles is a 1950s style diner located in Madison, Wisconsin. Opened in 1946 by Mickey Weidman, and located just across the street from Camp Randall Stadium, it has become a popular game day tradition amongst
-                            many Badger fans. The diner is well known for its breakfast selections, especially the Scrambler, which is a large mound of potatoes, eggs, cheese, gravy, and a patrons’ choice of other toppings.</p>
-                        <p>Mickies has also been featured on “Todd’s Taste of the Town” during one of ESPN’s college football broadcasts. We are one of the best Chinese restaurants in the New York, New York area. We have been recognized for our outstanding
-                            Chinese & Asian cuisine, excellent Chinese menu, and great restaurant specials. We are one of the best Chinese restaurants in the New York, New York area. We have been recognized for our outstanding Chinese & Asian cuisine,
-                            excellent Chinese menu, and great restaurant specials.</p>
+                        <br><br>
+                        <p>{{ $restaurants->details }}</p>
                         <hr>
                     </div>
                     <div class="row">
@@ -254,8 +251,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="booking-checkbox_wrap mt-4">
-                    <h5>34 Reviews</h5>
+
+                {{-- User Reviews Commented --}}
+
+                {{--<div class="booking-checkbox_wrap mt-4">
+                    <h5>2 Reviews</h5>
                     <hr>
                     <div class="customer-review_wrap">
                         <div class="customer-img">
@@ -276,10 +276,6 @@
                                 </div>
                                 <div class="customer-rating">8.0</div>
                             </div>
-                            <p class="customer-text">I love the noodles here but it is so rare that I get to come here. Tasty Hand-Pulled Noodles is the best type of whole in the wall restaurant. The staff are really nice, and you should be seated quickly. I usually get the
-                                hand pulled noodles in a soup. House Special #1 is amazing and the lamb noodles are also great. If you want your noodles a little chewier, get the knife cut noodles, which are also amazing. Their dumplings are great
-                                dipped in their chili sauce.
-                            </p>
                             <p class="customer-text">I love how you can see into the kitchen and watch them make the noodles and you can definitely tell that this is a family run establishment. The prices are are great with one dish maybe being $9. You just have to remember
                                 to bring cash.
                             </p>
@@ -302,7 +298,7 @@
                         <div class="customer-content-wrap">
                             <div class="customer-content">
                                 <div class="customer-review">
-                                    <h6>A hole-in-the-wall old school shop.</h6>
+                                    <h6>Not a good at all.</h6>
                                     <span class="customer-rating-red"></span>
                                     <span class="round-icon-blank"></span>
                                     <span class="round-icon-blank"></span>
@@ -313,13 +309,12 @@
                                 <div class="customer-rating customer-rating-red">2.0</div>
                             </div>
                             <p class="customer-text">The dumplings were so greasy...the pan-fried shrimp noodles were the same. So much oil and grease it was difficult to eat. The shrimp noodles only come with 3 shrimp (luckily the dish itself is cheap) </p>
-                            <p class="customer-text">The beef noodle soup was okay. I added black vinegar into the broth to give it some extra flavor. The soup has bok choy which I liked - it's a nice textural element. The shop itself is really unclean (which is the case
-                                in many restaurants in Chinatown) They don't wipe down the tables after customers have eaten. If you peak into the kitchen many of their supplies are on the ground which is unsettling... </p>
+
                             <span>10 people marked this review as helpful</span>
                             <a href="#"><span class="icon-like"></span>Helpful</a>
                         </div>
                     </div>
-                </div>
+                </div>--}}
             </div>
             <div class="col-md-4 responsive-wrap">
                 <div class="contact-info">
@@ -334,7 +329,7 @@
                     </div>
                     <div class="address">
                         <span class="icon-link"></span>
-                        <p>http://hello-food.com</p>
+                        <p>http://abdullah-food.com</p>
                     </div>
                     <div class="address">
                         <span class="icon-clock"></span>
@@ -343,7 +338,10 @@
                     </div>
                     <a href="#" class="btn btn-outline-danger btn-contact">SEND A MESSAGE</a>
                 </div>
-                <div class="follow">
+
+                {{-- User Info Commented --}}
+
+                {{--<div class="follow">
                     <div class="follow-img">
                         <img src="{{ asset('front-end/images/follow-img.jpg') }}" class="img-fluid" alt="#">
                         <h6>Abdullah</h6>
@@ -364,7 +362,7 @@
                         </li>
                     </ul>
                     <a href="#">FOLLOW</a>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ class CreateRestaurantsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('name')->comment('SEO Slug');
             $table->string('display_name');
-            $table->string('details')->nullable();
+            $table->longtext('details')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('photo')->nullable();

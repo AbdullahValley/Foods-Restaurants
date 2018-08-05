@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Food;
+use App\FoodCourt;
+use App\Restaurant;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +20,11 @@ class FoodController extends Controller
 
     public function create()
     {
-        return view ('admin.food.create');
+        $restaurants = Restaurant::orderBy('id')->get();
+
+        $food_courts = FoodCourt::orderBy('id')->get();
+
+        return view ('admin.food.create', compact('restaurants', 'food_courts'));
     }
 
 
@@ -78,7 +84,11 @@ class FoodController extends Controller
     public function edit($id)
     {
         $food = Food::find($id);
-        return view ('admin.food.edit',compact('food'));
+
+        $restaurants = Restaurant::orderBy('id')->get();
+        $food_courts = FoodCourt::orderBy('id')->get();
+
+        return view ('admin.food.edit',compact('food','restaurants', 'food_courts'));
     }
 
 

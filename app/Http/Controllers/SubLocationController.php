@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Location;
 use App\SubLocation;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -17,7 +18,9 @@ class SubLocationController extends Controller
 
     public function create()
     {
-        return view ('admin.location.sub-location.create');
+        $locations = Location::orderBy('id')->get();
+
+        return view ('admin.location.sub-location.create', compact('locations'));
     }
 
 
@@ -66,7 +69,10 @@ class SubLocationController extends Controller
     public function edit($id)
     {
         $sub_location = SubLocation::find($id);
-        return view ('admin.location.sub-location.edit',compact('sub_location'));
+
+        $locations = Location::orderBy('id')->get();
+
+        return view ('admin.location.sub-location.edit',compact('sub_location', 'locations'));
     }
 
 

@@ -64,9 +64,9 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select id="country_name" class="form-control" name="country_id" required>
                                         <option value="">Select Country</option>
-                                        <option value="1">Bangladesh</option>
-                                        <option value="2">Saudi Arabia</option>
-                                        <option value="3">Abu Dhabi</option>
+                                        @foreach($countries as $country)
+                                            <option value="{{ $country->id }}">{{ $country->nicename }}</option>
+                                        @endforeach
                                     </select>
                                     @if($errors->has('country_id')) <span class="text-danger">{{ $errors->first('country_id') }}</span> @endif
                                 </div>

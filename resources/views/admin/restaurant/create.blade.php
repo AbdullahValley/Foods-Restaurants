@@ -174,10 +174,10 @@
                                    </label>
                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                        <select id="same" class="form-control" name="city" required>
-                                           <option value="">Select </option>
-                                           <option value="1">Dhaka</option>
-                                           <option value="2">Rajshahi</option>
-                                           <option value="3">Khulna</option>
+                                           <option value="">Select City</option>
+                                           @foreach($cities as $city)
+                                               <option value="{{ $city->id }}">{{ $city->display_name }}</option>
+                                           @endforeach
                                        </select>
                                        @if($errors->has('city')) <span class="text-danger">{{ $errors->first('city') }}</span> @endif
                                    </div>
@@ -188,10 +188,10 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="same1" class="form-control" name="location" required>
-                                            <option value="">Select </option>
-                                            <option value="1">Dhanmondi</option>
-                                            <option value="2">Mirpur</option>
-                                            <option value="3">Khalishpur</option>
+                                            <option value="">Select Location</option>
+                                            @foreach($locations as $location)
+                                                <option value="{{ $location->id }}">{{ $location->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('location')) <span class="text-danger">{{ $errors->first('location') }}</span> @endif
                                     </div>
@@ -202,10 +202,10 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="same2" class="form-control" name="sub_location" required>
-                                            <option value="">Select </option>
-                                            <option value="1">Kathal Bagan</option>
-                                            <option value="2">Vatapara</option>
-                                            <option value="3">KUET</option>
+                                            <option value="">Select Sub Location</option>
+                                            @foreach($sub_locations as $sub_location)
+                                                <option value="{{ $sub_location->id }}">{{ $sub_location->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('sub_location')) <span class="text-danger">{{ $errors->first('sub_location') }}</span> @endif
                                     </div>
@@ -216,10 +216,10 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="same3" class="form-control" name="food_court" required>
-                                            <option value="">Select </option>
-                                            <option value="1">Bashundhara City</option>
-                                            <option value="2">New Market</option>
-                                            <option value="3">Shopping Mall</option>
+                                            <option value="">Select Food Court</option>
+                                            @foreach($food_courts as $food_court)
+                                                <option value="{{ $food_court->id }}">{{ $food_court->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('food_court')) <span class="text-danger">{{ $errors->first('food_court') }}</span> @endif
                                     </div>

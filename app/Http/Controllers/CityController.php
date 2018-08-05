@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\City;
+use App\Country;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -17,7 +18,9 @@ class CityController extends Controller
 
     public function create()
     {
-        return view ('admin.location.city.create');
+        $countries = Country::orderBy('id')->get();
+
+        return view ('admin.location.city.create', compact('countries'));
     }
 
 
@@ -66,7 +69,10 @@ class CityController extends Controller
     public function edit($id)
     {
         $city = City::find($id);
-        return view ('admin.location.city.edit',compact('city'));
+
+        $countries = Country::orderBy('id')->get();
+
+        return view ('admin.location.city.edit',compact('city', 'countries'));
     }
 
 

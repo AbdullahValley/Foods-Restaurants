@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\FoodCourt;
+use App\SubLocation;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -17,7 +18,9 @@ class FoodCourtController extends Controller
 
     public function create()
     {
-        return view ('admin.food-court.create');
+        $sub_locations = SubLocation::orderBy('id')->get();
+
+        return view ('admin.food-court.create', compact('sub_locations'));
     }
 
 
@@ -66,7 +69,10 @@ class FoodCourtController extends Controller
     public function edit($id)
     {
         $food_court = FoodCourt::find($id);
-        return view ('admin.food-court.edit',compact('food_court'));
+
+        $sub_locations = SubLocation::orderBy('id')->get();
+
+        return view ('admin.food-court.edit',compact('food_court', 'sub_locations'));
     }
 
 

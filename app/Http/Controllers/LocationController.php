@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use App\Location;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -17,7 +18,9 @@ class LocationController extends Controller
 
     public function create()
     {
-        return view ('admin.location.create');
+        $cities = City::orderBy('id')->get();
+
+        return view ('admin.location.create', compact('cities'));
     }
 
 
@@ -66,7 +69,10 @@ class LocationController extends Controller
     public function edit($id)
     {
         $city = Location::find($id);
-        return view ('admin.location.edit',compact('city'));
+
+        $cities = City::orderBy('id')->get();
+
+        return view ('admin.location.edit',compact('city', 'cities'));
     }
 
 

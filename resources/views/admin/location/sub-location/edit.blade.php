@@ -64,9 +64,9 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select id="location_name" class="form-control" name="location_id" required>
                                         <option value="">Select Location</option>
-                                        <option value="1">Dhanmondi</option>
-                                        <option value="2">Campus Area</option>
-                                        <option value="3">Outer Mall</option>
+                                        @foreach($locations as $location)
+                                            <option value="{{ $location->id }}">{{ $location->display_name }}</option>
+                                        @endforeach
                                     </select>
                                     @if($errors->has('location_id')) <span class="text-danger">{{ $errors->first('location_id') }}</span> @endif
                                 </div>

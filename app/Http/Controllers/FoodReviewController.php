@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Food;
 use App\FoodReview;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -18,7 +19,9 @@ class FoodReviewController extends Controller
 
     public function create()
     {
-        return view ('admin.food-review.create');
+        $foods = Food::orderBy('id')->get();
+
+        return view ('admin.food-review.create', compact('foods'));
     }
 
 
@@ -74,7 +77,10 @@ class FoodReviewController extends Controller
     public function edit($id)
     {
         $food_review = FoodReview::find($id);
-        return view ('admin.food-review.edit',compact('food_review'));
+
+        $foods = Food::orderBy('id')->get();
+
+        return view ('admin.food-review.edit',compact('food_review', 'foods'));
     }
 
 

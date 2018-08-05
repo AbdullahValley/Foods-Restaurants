@@ -57,10 +57,10 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="sub_location_name" class="form-control" name="sub_location_id" required>
-                                            <option value="">Select Sub Location Name</option>
-                                            <option value="1">Kathal Bagan</option>
-                                            <option value="2">Campus Square</option>
-                                            <option value="3">Inside Mall</option>
+                                            <option value="">Select Sub Location</option>
+                                            @foreach($sub_locations as $sub_location)
+                                                <option value="{{ $sub_location->id }}">{{ $sub_location->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('sub_location_id')) <span class="text-danger">{{ $errors->first('sub_location_id') }}</span> @endif
                                     </div>

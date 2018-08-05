@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
+use App\Country;
+use App\FoodCourt;
+use App\Location;
 use App\Restaurant;
+use App\SubLocation;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +23,13 @@ class RestaurantController extends Controller
 
     public function create()
     {
-        return view ('admin.restaurant.create');
+        //$countries = Country::orderBy('id')->get();
+        $cities = City::orderBy('id')->get();
+        $locations = Location::orderBy('id')->get();
+        $sub_locations = SubLocation::orderBy('id')->get();
+        $food_courts = FoodCourt::orderBy('id')->get();
+
+        return view ('admin.restaurant.create', compact('cities', 'locations', 'sub_locations', 'food_courts'));
     }
 
 
@@ -84,7 +95,14 @@ class RestaurantController extends Controller
     public function edit($id)
     {
         $restaurant = Restaurant::find($id);
-        return view ('admin.restaurant.edit',compact('restaurant'));
+
+        //$countries = Country::orderBy('id')->get();
+        $cities = City::orderBy('id')->get();
+        $locations = Location::orderBy('id')->get();
+        $sub_locations = SubLocation::orderBy('id')->get();
+        $food_courts = FoodCourt::orderBy('id')->get();
+
+        return view ('admin.restaurant.edit',compact('restaurant','cities', 'locations', 'sub_locations', 'food_courts'));
     }
 
 

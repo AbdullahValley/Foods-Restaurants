@@ -57,9 +57,9 @@
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="restaurant_name" class="form-control" name="restaurant_id" required>
                                             <option value="">Select Restaurant</option>
-                                            <option value="1">Cafe Primeasia</option>
-                                            <option value="2">Star Kabab</option>
-                                            <option value="3">Burger King</option>
+                                            @foreach($restaurants as $restaurant)
+                                                <option value="{{ $restaurant->id }}">{{ $restaurant->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('restaurant_id')) <span class="text-danger">{{ $errors->first('restaurant_id') }}</span> @endif
                                     </div>
@@ -147,10 +147,10 @@
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="same3" class="form-control" name="food_court">
-                                            <option value="">Select </option>
-                                            <option value="1">Bashundhara City</option>
-                                            <option value="2">New Market</option>
-                                            <option value="3">Shopping Mall</option>
+                                            <option value="">Select Food Court</option>
+                                            @foreach($food_courts as $food_court)
+                                                <option value="{{ $food_court->id }}">{{ $food_court->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('food_court')) <span class="text-danger">{{ $errors->first('food_court') }}</span> @endif
                                     </div>

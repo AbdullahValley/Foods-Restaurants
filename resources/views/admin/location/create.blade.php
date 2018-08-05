@@ -58,9 +58,9 @@
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select id="city_name" class="form-control" name="city_id" required>
                                             <option value="">Select City</option>
-                                            <option value="1">Dhaka</option>
-                                            <option value="2">Madina</option>
-                                            <option value="3">Dubai</option>
+                                            @foreach($cities as $city)
+                                                <option value="{{ $city->id }}">{{ $city->display_name }}</option>
+                                            @endforeach
                                         </select>
                                         @if($errors->has('city_id')) <span class="text-danger">{{ $errors->first('city_id') }}</span> @endif
                                     </div>

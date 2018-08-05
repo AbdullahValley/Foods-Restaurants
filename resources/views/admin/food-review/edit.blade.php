@@ -64,9 +64,9 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select id="food_name" class="form-control" name="food_id" required>
                                         <option value="">Select Food</option>
-                                        <option value="1">Pizza</option>
-                                        <option value="2">Burger</option>
-                                        <option value="3">Drinks</option>
+                                        @foreach($foods as $food)
+                                            <option value="{{ $food->id }}">{{ $food->display_name }}</option>
+                                        @endforeach
                                     </select>
                                     @if($errors->has('food_id')) <span class="text-danger">{{ $errors->first('food_id') }}</span> @endif
                                 </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Restaurant;
+use Illuminate\Support\Facades\DB;
 use App\RestaurantCategory;
 use App\RestaurantType;
 use Illuminate\Http\Request;
@@ -33,7 +34,25 @@ class WelcomeController extends Controller
     public function get_restaurant_name($id)
     {
         $restaurants = Restaurant::find($id);
-        return view('front-view.details', compact('restaurants'));
+
+
+        $get_sub_location_id = DB::table("restaurants")->where('unique_id', $id)->pluck("sub_location");
+        $get_sub_location_name = DB::table("sub_locations")->whereIn('id', $get_sub_location_id)->pluck("display_name");
+
+
+        $get_location_id = DB::table("restaurants")->where('unique_id', $id)->pluck("location");
+        $get_location_name = DB::table("locations")->whereIn('id', $get_location_id)->pluck("display_name");
+
+
+        $get_food_court_id = DB::table("restaurants")->where('unique_id', $id)->pluck("food_court");
+        $get_food_court_name = DB::table("food_courts")->whereIn('id', $get_food_court_id)->pluck("display_name");
+
+
+        $get_city_id = DB::table("restaurants")->where('unique_id', $id)->pluck("city");
+        $get_city_name = DB::table("cities")->whereIn('id', $get_city_id)->pluck("display_name");
+
+
+        return view('front-view.details', compact('restaurants', 'get_sub_location_name', 'get_location_name', 'get_food_court_name', 'get_city_name'));
     }
 
 

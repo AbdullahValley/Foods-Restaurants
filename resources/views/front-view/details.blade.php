@@ -321,7 +321,7 @@
                     <img src="{{ asset('front-end/images/map.jpg') }}" class="img-fluid" alt="#">
                     <div class="address">
                         <span class="icon-location-pin"></span>
-                        <p> Dhanmondi<br> Dhaka<br> Basundhara City <br> Panthapath</p>
+                        <p>{{ $get_sub_location_name[0] }}<br> {{ $get_location_name[0] }}<br> {{ $get_food_court_name[0] }} <br> {{ $get_city_name[0] }}</p>
                     </div>
                     <div class="address">
                         <span class="icon-screen-smartphone"></span>

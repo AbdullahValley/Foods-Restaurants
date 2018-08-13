@@ -10,9 +10,13 @@ Route::resource('/', 'WelcomeController');
 
 Route::resource('/restaurant-list/', 'FrontRestaurantController');
 
+Route::resource('/food-list/', 'FrontFoodController');
+
 Route::get('/restaurant-categories/{id}', 'WelcomeController@get_category_name');
-Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_name');
+Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_details');
 Route::get('/restaurant-types/{id}', 'WelcomeController@get_restaurant_type');
+
+Route::get('/food/{id}', 'WelcomeController@get_food_details');
 
 
 Route::get('/about', function () {

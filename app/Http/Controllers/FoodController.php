@@ -66,6 +66,7 @@ class FoodController extends Controller
 
         $food->video    = $request->video;
         $food->rating   = $request->rating;
+        $food->price    = $request->price;
         $food->featured = $request->featured == null ? $request->featured = '0' : $request->featured = '1';
         $food->status   = $request->status;
 
@@ -128,6 +129,7 @@ class FoodController extends Controller
 
         $food->video    = $request->video;
         $food->rating   = $request->rating;
+        $food->price   = $request->price;
         $food->featured = $request->featured == null ? $request->featured = '0' : $request->featured = '1';
         $food->status   = $request->status;
 

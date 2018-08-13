@@ -60,6 +60,7 @@
                                 <th>Food Name</th>
                                 <th>Title</th>
                                 <th>Details</th>
+                                <th>Price</th>
                                 <th>Restaurant Name</th>
                                 <th>Photo</th>
                                 <th>Status</th>
@@ -75,6 +76,7 @@
                                     <td>{{ $food->name }}</td>
                                     <td>{{ $food->display_name }}</td>
                                     <td>{{ $food->details }}</td>
+                                    <td>{{ $food->price }}</td>
                                     <td>{{ $food->restaurant_id }}</td>
                                     <td>
 

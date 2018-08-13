@@ -27,6 +27,7 @@ class CreateFoodsTable extends Migration
             $table->string('competitors')->nullable();
             $table->string('video')->nullable();
             $table->string('rating')->nullable();
+            $table->integer('price');
             $table->string('featured')->default(0)->comment('1=Featured, 0=Non Featured');
             $table->boolean('status')->default(1)->comment('1=Active, 0=Inactive');
             $table->timestamps();

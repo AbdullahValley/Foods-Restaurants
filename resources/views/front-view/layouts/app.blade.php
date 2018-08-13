@@ -44,6 +44,64 @@
 </section>
 <!--// SLIDER -->
 <!--//END HEADER -->
+
+
+<section class="main-block light-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="styled-heading">
+                    <h3>New Added Foods</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach($foods as $food)
+                <div class="col-md-4 featured-responsive">
+
+                    <div class="featured-place-wrap">
+                        <a href="{{ url('/food/'.$food->unique_id) }}">
+                            <img src="{{ $food->photo ? asset('uploads/image/'.$food->photo) : asset('uploads/image/default-restaurant.png') }}" class="img-fluid" alt="#">
+
+                            @php
+                                if($food->rating >7)
+                                    $rating_color = "featured-rating-green";
+
+                                elseif ($food->rating >5  && $food->rating <7)
+                                    $rating_color = "featured-rating-orange";
+                                else
+                                    $rating_color = "featured-rating";
+                            @endphp
+
+                            <span class="{{ $rating_color }}">{{ $food->rating }}</span>
+                            <div class="featured-title-box">
+                                <h6>{{ $food->display_name }}</h6>
+                                {{--<p>{{ $food->details }} </p> <span>• </span>--}}
+                                <p>3 Reviews</p> <span> • </span>
+                                <p><span>$ </span>{{ $food->price }} Taka</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+            @endforeach
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="featured-btn-wrap">
+                    <a href="{{ url('/food-list') }}" class="btn btn-danger">VIEW ALL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--//END NEW ADDED FOODS -->
+
+
+
 <!--============================= FIND PLACES =============================-->
 <section class="main-block">
     <div class="container">

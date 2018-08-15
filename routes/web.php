@@ -19,6 +19,9 @@ Route::get('/restaurant-types/{id}', 'WelcomeController@get_restaurant_type');
 Route::get('/food/{id}', 'WelcomeController@get_food_details');
 
 
+Route::resource('/cart', 'CartController');
+
+
 Route::get('/about', function () {
     return 'About Us';
 });

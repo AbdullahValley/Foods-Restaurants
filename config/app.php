@@ -152,6 +152,8 @@ return [
          */
         Laratrust\LaratrustServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Darryldecode\Cart\CartServiceProvider::class,
+
 
 
         /*
@@ -213,6 +215,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Laratrust' => Laratrust\LaratrustFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
 
     ],
 

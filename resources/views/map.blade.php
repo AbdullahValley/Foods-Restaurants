@@ -21,6 +21,17 @@
                 </div>
 
                 <div class="card-body">
+
+                    <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7908cd0369d7d2bde995a6a413a649626ffd5109'></script>
+                    <script>
+
+                        document.write('<img src="https://www.freevisitorcounters.com/ctrimg/counter-id-427392.png" border="0" class="counterimg">');
+
+                    </script>
+
+                </div>
+
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

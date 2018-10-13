@@ -158,9 +158,15 @@
                         <span>0 reviews</span>
                     </div>
                     <div class="reserve-btn">
+                        <form action="{{ action('CartController@store') }}" method="post" enctype="multipart/form-data" class="form-horizontal">
+                            @csrf
+                            <input type="hidden" name="product_id" value="{{ $foods->unique_id }}">
+                            <input type="hidden" name="name" value="{{ $foods->display_name }}">
+                            <input type="hidden" name="price" value="{{ $foods->price }}">
                         <div class="featured-btn-wrap">
-                            <a href="#" class="btn btn-danger">ORDER NOW</a>
+                            <button type="submit" class="btn btn-danger">ADD TO CART</button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>

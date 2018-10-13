@@ -102,8 +102,59 @@
 <section class="light-bg booking-details_wrap">
     <div class="container">
         <div class="row">
+            @if(session('successMsg'))
+                <span class="alert alert-success alert-dismissible" role="alert">
+                            {{ session('successMsg') }}.
+                        </span>
+            @endif
 
-            <div class="col-md-6">
+                <table class="table table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        {{--<th>Quantity</th>--}}
+                        {{--<th>Action</th>--}}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @php($sl=1)
+
+                    @foreach($cart as $cart)
+                        <tr>
+                            <td>{{ $sl++ }}</td>
+                            <td>{{ $cart->name }}</td>
+                            <td>{{ $cart->price }}</td>
+                            {{--<td>{{ $cart->quantity }}</td>--}}
+                            {{--<td>--}}
+
+                                {{--<a href="{{ action('FoodNewsController@edit', $food_news->unique_id) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</a>--}}
+                                {{--<form action="{{ action('FoodNewsController@destroy', $food_news->unique_id) }}" method="post" style="display: inline">--}}
+                                    {{--@csrf--}}
+                                    {{--{{ method_field('DELETE') }}--}}
+                                    {{--<button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('PERMANENTLY Delete this User. Are you Sure ?')">--}}
+                                        {{--<i class="fa fa-trash-o"> Delete</i>--}}
+                                    {{--</button>--}}
+                                {{--</form>--}}
+
+
+                            {{--</td>--}}
+                        </tr>
+
+                    @endforeach
+
+                    </tbody>
+
+                    <tfoot>
+                    <tr>
+                        <td colspan="3" align="center"><b>Total :</b> {{ $amount }} Taka</td>
+                    </tr>
+                    <tr><td colspan="3" align="center">Make Payment</td></tr>
+                    </tfoot>
+
+                </table>
+            {{--<div class="col-md-6">
                 <form action="" method="post" class="form-horizontal">
                     @csrf
                     <div class="form-group">
@@ -124,7 +175,7 @@
                             <select name="country" id="country" class="form-control">
                                 <option value="">Choose Food</option>
                                 @foreach($foods as $food)
-                                    <option style="background-image:url(avatar.png);" value="{{ $food->id }}" >{{ $food->display_name }}</option>
+                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
                                 @endforeach
                             </select>
 
@@ -140,7 +191,7 @@
                     </div>
 
                 </form>
-            </div>
+            </div>--}}
 
         </div>
     </div>

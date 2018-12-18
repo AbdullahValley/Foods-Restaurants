@@ -22,6 +22,9 @@ Route::get('/food/{id}', 'WelcomeController@get_food_details');
 Route::resource('/cart', 'CartController');
 
 
+Route::get('/compare', 'CompareController@index');
+
+
 Route::get('/about', function () {
     return 'About Us';
 });

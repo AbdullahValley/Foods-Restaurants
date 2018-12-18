@@ -22,12 +22,11 @@
 
                 <div class="card-body">
 
+                    <a href='https://freehitcounters.org/'>.</a>
+
                     <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=7908cd0369d7d2bde995a6a413a649626ffd5109'></script>
-                    <script>
 
-                        document.write('<img src="https://www.freevisitorcounters.com/ctrimg/counter-id-427392.png" border="0" class="counterimg">');
-
-                    </script>
+                    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/427392/t/6"></script>
 
                 </div>
 

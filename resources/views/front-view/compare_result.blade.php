@@ -12,7 +12,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Compare || Food & Restaurant by Abdullah Al Noman</title>
+    <title>Compare Results || Food & Restaurant by Abdullah Al Noman</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -102,94 +102,117 @@
 <section class="light-bg booking-details_wrap">
     <div class="container">
 
-        <form action="{{ url('/compare-view') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
-            @csrf
 
-        <div class="row">
+            <div class="row">
 
 
 
 
-            <div class="col-md-4">
+                <div class="col-md-4">
 
                     <div class="form-group" align="center">
-                        <label class="col-md-4 control-label">Select Food #1</label>
+                        <label class="col-md-4 control-label">Food #1</label>
                         <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
-                                @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
+
+
+                            @foreach($foods as $food)
+
+                            <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+
+                            <b>Food Name</b> : {{ $food->name }} <br>
+                            <b>Title</b> : {{ $food->display_name }} <br>
+                            <b>Details</b> : {{ $food->details }} <br>
+                            <b>Price</b> : {{ $food->price }} <br>
+                            <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
+
+
+                            @endforeach
+
+
+
 
                         </div>
                     </div>
 
 
 
-            </div>
+                </div>
 
 
 
 
-            <div class="col-md-4">
+                <div class="col-md-4">
 
                     <div class="form-group" align="center">
-                        <label class="col-md-4 control-label">Select Food #2</label>
+                        <label class="col-md-4 control-label">Food #2</label>
                         <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
-                                @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
+
+
+
+                            @foreach($foods as $food)
+
+                                <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+
+                                <b>Food Name</b> : {{ $food->name }} <br>
+                                <b>Title</b> : {{ $food->display_name }} <br>
+                                <b>Details</b> : {{ $food->details }} <br>
+                                <b>Price</b> : {{ $food->price }} <br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
+
+
+                            @endforeach
+
+
+
 
                         </div>
                     </div>
 
 
 
-            </div>
+                </div>
 
 
 
 
 
-            <div class="col-md-4">
+                <div class="col-md-4">
 
 
                     <div class="form-group" align="center">
-                        <label class="col-md-4 control-label">Select Food #3</label>
+                        <label class="col-md-4 control-label">Food #3</label>
                         <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
-                                @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
+
+
+
+                            @foreach($foods as $food)
+
+                                <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+
+                                <b>Food Name</b> : {{ $food->name }} <br>
+                                <b>Title</b> : {{ $food->display_name }} <br>
+                                <b>Details</b> : {{ $food->details }} <br>
+                                <b>Price</b> : {{ $food->price }} <br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
+
+
+                            @endforeach
+
+
+
 
                         </div>
                     </div>
 
+                </div>
+
+
+
+
             </div>
 
 
 
-
-        </div>
-
-            <br>
-                <br>
-                    <br>
-
-<center>
-            <div class="review-btn">
-
-                <button type="submit" class="btn btn-outline-danger">Compare Now</button>
-
-            </div>
-</center>
-        </form>
 
     </div>
 </section>

@@ -21,7 +21,10 @@ class CompareController extends Controller
 
     public function view()
     {
-        //
+        $foods = Food::orderBy('id', 'desc')->get();
+
+        return view ('front-view.compare_result', compact('foods'));
+
     }
 
 

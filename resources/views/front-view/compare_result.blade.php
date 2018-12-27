@@ -127,7 +127,18 @@
                             <b>Details</b> : {{ $food->details }} <br>
                             <b>Price</b> : {{ $food->price }} <br>
 
+                            <b>Ratings</b> :<br>
+                                @php
+                                    if($food->rating >7)
+                                        $rating_color = "featured-rating-green";
 
+                                    elseif ($food->rating >5  && $food->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $food->rating }}</span>
 
                             @endforeach
 
@@ -162,7 +173,18 @@
                                 <b>Details</b> : {{ $food->details }} <br>
                                 <b>Price</b> : {{ $food->price }} <br>
 
+                                <b>Ratings</b> :<br>
+                                @php
+                                    if($food->rating >7)
+                                        $rating_color = "featured-rating-green";
 
+                                    elseif ($food->rating >5  && $food->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $food->rating }}</span>
 
                             @endforeach
 
@@ -175,6 +197,7 @@
 
 
                     <center>
+                        <br><br>
                         <div class="review-btn">
 
                             <a href="{{ url('/compare') }}" class="btn btn-outline-danger">Compare Again</a>
@@ -207,6 +230,19 @@
                                 <b>Title</b> : {{ $food->display_name }} <br>
                                 <b>Details</b> : {{ $food->details }} <br>
                                 <b>Price</b> : {{ $food->price }} <br>
+
+                                <b>Ratings</b> :<br>
+                                @php
+                                    if($food->rating >7)
+                                        $rating_color = "featured-rating-green";
+
+                                    elseif ($food->rating >5  && $food->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $food->rating }}</span>
 
 
 

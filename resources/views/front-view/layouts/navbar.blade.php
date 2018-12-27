@@ -21,6 +21,10 @@
                                     <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                                 </li>
 
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{{ url('/compare') }}">Compare Foods</a>
+                                </li>
+
 {{--
                                 <li class="nav-item active">
                                     <a class="nav-link" href="{{ url('/details') }}">Details</a>

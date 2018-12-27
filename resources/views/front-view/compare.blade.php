@@ -102,7 +102,7 @@
 <section class="light-bg booking-details_wrap">
     <div class="container">
 
-        <form action="{{ url('/compare-view') }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <form action="{{ url('/compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
             @csrf
 
         <div class="row">
@@ -115,12 +115,22 @@
                     <div class="form-group" align="center">
                         <label class="col-md-4 control-label">Select Food #1</label>
                         <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
-                                @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
+
+
+
+
+
+                                    <select name="food_id_1" class="form-control">
+                                                    <option value=0>Select Food</option>
+                                                @foreach($foods as $food)
+                                                    <option value={{ $food->id }} >{{ $food->display_name }}</option>
+                                                @endforeach
+                                    </select>
+
+
+
+
+
 
                         </div>
                     </div>
@@ -137,12 +147,15 @@
                     <div class="form-group" align="center">
                         <label class="col-md-4 control-label">Select Food #2</label>
                         <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
+
+
+                            <select name="food_id_2" class="form-control">
+                                <option value=0>Select Food</option>
                                 @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
+                                    <option value={{ $food->id }} >{{ $food->display_name }}</option>
                                 @endforeach
                             </select>
+
 
                         </div>
                     </div>
@@ -161,12 +174,13 @@
                     <div class="form-group" align="center">
                         <label class="col-md-4 control-label">Select Food #3</label>
                         <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
-                                @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
+
+                                <select name="food_id_3" class="form-control">
+                                    <option value=0>Select Food</option>
+                                    @foreach($foods as $food)
+                                        <option value={{ $food->id }} >{{ $food->display_name }}</option>
+                                    @endforeach
+                                </select>
 
                         </div>
                     </div>

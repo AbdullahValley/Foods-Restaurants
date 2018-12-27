@@ -115,15 +115,18 @@
                         <div class="col-md-8">
 
 
-                            @foreach($foods as $food)
+
+
+                            @foreach($food_1 as $food)
 
                             <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
 
                             <b>Food Name</b> : {{ $food->name }} <br>
+                            <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
                             <b>Title</b> : {{ $food->display_name }} <br>
                             <b>Details</b> : {{ $food->details }} <br>
                             <b>Price</b> : {{ $food->price }} <br>
-                            <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
+
 
 
                             @endforeach
@@ -149,15 +152,16 @@
 
 
 
-                            @foreach($foods as $food)
+                            @foreach($food_2 as $food)
 
                                 <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
 
                                 <b>Food Name</b> : {{ $food->name }} <br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
                                 <b>Title</b> : {{ $food->display_name }} <br>
                                 <b>Details</b> : {{ $food->details }} <br>
                                 <b>Price</b> : {{ $food->price }} <br>
-                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
+
 
 
                             @endforeach
@@ -168,6 +172,15 @@
                         </div>
                     </div>
 
+
+
+                    <center>
+                        <div class="review-btn">
+
+                            <a href="{{ url('/compare') }}" class="btn btn-outline-danger">Compare Again</a>
+
+                        </div>
+                    </center>
 
 
                 </div>
@@ -185,15 +198,16 @@
 
 
 
-                            @foreach($foods as $food)
+                            @foreach($food_3 as $food)
 
                                 <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
 
                                 <b>Food Name</b> : {{ $food->name }} <br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
                                 <b>Title</b> : {{ $food->display_name }} <br>
                                 <b>Details</b> : {{ $food->details }} <br>
                                 <b>Price</b> : {{ $food->price }} <br>
-                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
+
 
 
                             @endforeach

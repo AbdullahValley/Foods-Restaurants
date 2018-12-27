@@ -24,7 +24,8 @@ Route::resource('/cart', 'CartController');
 
 Route::get('/compare', 'CompareController@index');
 
-Route::get('/compare-view', 'CompareController@view');
+Route::post('/compare-view', 'CompareController@view');
+
 
 
 Route::get('/about', function () {

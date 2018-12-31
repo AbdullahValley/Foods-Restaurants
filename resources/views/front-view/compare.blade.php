@@ -116,7 +116,7 @@
     <div class="container">
 
 
-        @if(Request::url() === 'http://127.0.0.1:8000/food-compare')
+        @if(Route::current()->getName() == 'food-compare')
 
 
         <form action="{{ url('/food-compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
@@ -223,7 +223,7 @@
         @endif
 
 
-            @if(Request::url() === 'http://127.0.0.1:8000/restaurant-compare')
+            @if(Route::current()->getName() == 'restaurant-compare')
 
                 <form action="{{ url('/restaurant-compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
                     @csrf

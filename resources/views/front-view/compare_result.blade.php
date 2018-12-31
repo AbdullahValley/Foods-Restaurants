@@ -117,12 +117,9 @@
 
 
 
-        @if(Request::url() === 'http://127.0.0.1:8000/food-compare-view')
-
+            @if(Route::current()->getName() == 'food-compare-view')
 
             <div class="row">
-
-
 
 
                 <div class="col-md-4">
@@ -282,11 +279,9 @@
 
 
 
-        @if(Request::url() === 'http://127.0.0.1:8000/restaurant-compare-view')
-
+        @if(Route::current()->getName() == 'restaurant-compare-view')
 
         <div class="row">
-
 
             <div class="col-md-4">
 

@@ -26,9 +26,14 @@ Route::get('/food/{id}', 'WelcomeController@get_food_details');
 Route::resource('/cart', 'CartController');
 
 
-Route::get('/compare', 'CompareController@index');
+Route::get('/food-compare', 'CompareController@index');
 
-Route::post('/compare-view', 'CompareController@view');
+Route::post('/food-compare-view', 'CompareController@view');
+
+
+Route::get('/restaurant-compare', 'CompareController@restaurant_index');
+
+Route::post('/restaurant-compare-view', 'CompareController@restaurant_view');
 
 
 

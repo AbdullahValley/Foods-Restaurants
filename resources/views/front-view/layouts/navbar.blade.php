@@ -21,15 +21,25 @@
                                     <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                                 </li>
 
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{{ url('/compare') }}">Compare Foods</a>
+                                <li class="dropdown">
+                                    <a class="nav-link" href="#" data-toggle="dropdown">Compare</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="{{ url('/food-compare') }}">Compare Foods</a>
+                                        </li>
+
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="{{ url('/restaurant-compare') }}">Compare Restaurants</a>
+                                        </li>
+                                    </ul>
                                 </li>
 
-{{--
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="{{ url('/details') }}">Details</a>
-                                </li>
---}}
+
+                                {{--
+                                                                <li class="nav-item active">
+                                                                    <a class="nav-link" href="{{ url('/details') }}">Details</a>
+                                                                </li>
+                                --}}
                                 <li class="nav-item active">
                                     <a class="nav-link" href="{{ url('/restaurant-list') }}">All Restaurants</a>
                                 </li>

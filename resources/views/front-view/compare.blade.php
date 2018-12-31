@@ -53,6 +53,19 @@
                                 <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                             </li>
 
+                            <li class="dropdown">
+                                <a class="nav-link" href="#" data-toggle="dropdown">Compare</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ url('/food-compare') }}">Compare Foods</a>
+                                    </li>
+
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="{{ url('/restaurant-compare') }}">Compare Restaurants</a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             {{--
                                                             <li class="nav-item active">
                                                                 <a class="nav-link" href="{{ url('/details') }}">Details</a>
@@ -102,12 +115,14 @@
 <section class="light-bg booking-details_wrap">
     <div class="container">
 
-        <form action="{{ url('/compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+        @if(Request::url() === 'http://127.0.0.1:8000/food-compare')
+
+
+        <form action="{{ url('/food-compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
             @csrf
 
         <div class="row">
-
-
 
 
             <div class="col-md-4">
@@ -204,6 +219,127 @@
             </div>
 </center>
         </form>
+
+        @endif
+
+
+            @if(Request::url() === 'http://127.0.0.1:8000/restaurant-compare')
+
+                <form action="{{ url('/restaurant-compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                    @csrf
+
+                    <div class="row">
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group" align="center">
+                                <label class="col-md-4 control-label">Select Restaurant #1</label>
+                                <div class="col-md-8">
+
+
+
+
+
+                                    <select name="restaurant_id_1" class="form-control">
+                                        <option value=0>Select Restaurant</option>
+                                        @foreach($restaurants as $restaurant)
+                                            <option value={{ $restaurant->id }} >{{ $restaurant->display_name }}</option>
+                                        @endforeach
+                                    </select>
+
+
+
+
+
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                        <div class="col-md-4">
+
+                            <div class="form-group" align="center">
+                                <label class="col-md-4 control-label">Select Restaurant #2</label>
+                                <div class="col-md-8">
+
+
+                                    <select name="restaurant_id_2" class="form-control">
+                                        <option value=0>Select Restaurant</option>
+                                        @foreach($restaurants as $restaurant)
+                                            <option value={{ $restaurant->id }} >{{ $restaurant->display_name }}</option>
+                                        @endforeach
+                                    </select>
+
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="col-md-4">
+
+
+                            <div class="form-group" align="center">
+                                <label class="col-md-4 control-label">Select Restaurant #3</label>
+                                <div class="col-md-8">
+
+                                    <select name="restaurant_id_3" class="form-control">
+                                        <option value=0>Select Restaurant</option>
+                                        @foreach($restaurants as $restaurant)
+                                            <option value={{ $restaurant->id }} >{{ $restaurant->display_name }}</option>
+                                        @endforeach
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <center>
+                        <div class="review-btn">
+
+                            <button type="submit" class="btn btn-outline-danger">Compare Now</button>
+
+                        </div>
+                    </center>
+                </form>
+
+
+
+
+
+
+
+            @endif
+
+
+
+
+
+
+
 
     </div>
 </section>

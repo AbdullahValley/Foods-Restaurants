@@ -12,7 +12,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Food & Restaurant by Abdullah Al Noman</title>
+    <title>Foods Valley ~ Food & Restaurant by Abdullah Al Noman</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="./">Abdullah Food</a>
+                    <a class="navbar-brand" href="./">Foods Valley</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-menu"></span>
                     </button>
@@ -195,13 +195,13 @@
                                     <p><span>$$$</span>$$</p>
                                     <ul>
                                         <li><span class="icon-location-pin"></span>
-                                            <p>1301 Avenue, Brooklyn, NY 11230</p>
+                                            <p>1301 Avenue, Banani, Dhaka 1230</p>
                                         </li>
                                         <li><span class="icon-screen-smartphone"></span>
-                                            <p>+44 20 7336 8898</p>
+                                            <p>+88 017 336 8898</p>
                                         </li>
                                         <li><span class="icon-link"></span>
-                                            <p>https://burgerandlobster.com</p>
+                                            <p>http://foodvalley.xyz</p>
                                         </li>
 
                                     </ul>

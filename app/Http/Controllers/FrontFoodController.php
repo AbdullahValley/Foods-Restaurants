@@ -10,7 +10,7 @@ class FrontFoodController extends Controller
 
     public function index()
     {
-        $foods = Food::orderBy('id', 'desc')->limit(12)->where('status', 1)->get();
+        $foods = Food::orderBy('id', 'desc')->where('status', 1)->get();
         return view ('front-view.foods', compact('foods'));
     }
 

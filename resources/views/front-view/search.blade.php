@@ -1,3 +1,10 @@
+<div class="container">
+
+</div>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +19,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Foods Valley ~ Food & Restaurant by Abdullah Al Noman</title>
+    <title>Search Foods & Restaurants ~ Foods Valley</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -34,7 +41,7 @@
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="../">Foods Valley</a>
+                    <a class="navbar-brand" href="./">Foods Valley</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-menu"></span>
                     </button>
@@ -49,11 +56,11 @@
                                 <a class="nav-link" href="{{ url('/about') }}">About Us</a>
                             </li>
 
-                            {{--
                                                             <li class="nav-item active">
                                                                 <a class="nav-link" href="{{ url('/details') }}">Details</a>
                                                             </li>
-                            --}}
+
+
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ url('/restaurant-list') }}">All Restaurants</a>
                             </li>
@@ -80,10 +87,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7 responsive-wrap">
+
                 <div class="row detail-filter-wrap">
                     <div class="col-md-4 featured-responsive">
                         <div class="detail-filter-text">
-                            <p>14 Results For <span>{{ $restaurant_type->display_name }}</span></p>
+                            <p>Results For <span>Search</span></p>
                         </div>
                     </div>
                     <div class="col-md-8 featured-responsive">
@@ -111,6 +119,10 @@
                         </div>
                     </div>
                 </div>
+
+
+                @if(isset($restaurants))
+
                 <div class="row detail-checkbox-wrap">
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
 
@@ -169,8 +181,14 @@
                         </label>
 
                     </div>
+
                 </div>
+
+                @endif
+
                 <div class="row light-bg detail-options-wrap">
+
+        @if(isset($restaurants))
 
                     @foreach($restaurants as $restaurant)
                         <div class="col-sm-6 col-lg-12 col-xl-6 featured-responsive">
@@ -196,13 +214,13 @@
                                         <p><span>$$$</span>$$</p>
                                         <ul>
                                             <li><span class="icon-location-pin"></span>
-                                                <p>1301 Avenue, Brooklyn, NY 11230</p>
+                                                <p>1301 Avenue, Banani, Dhaka 1230</p>
                                             </li>
                                             <li><span class="icon-screen-smartphone"></span>
-                                                <p>+44 20 7336 8898</p>
+                                                <p>+88 017 336 8898</p>
                                             </li>
                                             <li><span class="icon-link"></span>
-                                                <p>https://burgerandlobster.com</p>
+                                                <p>http://foodvalley.xyz</p>
                                             </li>
 
                                         </ul>
@@ -217,6 +235,54 @@
                         </div>
                     @endforeach
 
+
+
+
+        @endif
+
+            @if(isset($foods))
+
+
+                @foreach($foods as $food)
+                    <div class="col-sm-6 col-lg-12 col-xl-6 featured-responsive">
+                        <div class="featured-place-wrap">
+                            <a href="{{ url('/food/'.$food->unique_id) }}">
+                                <img src="{{ $food->photo ? asset('uploads/image/'.$food->photo) : asset('uploads/image/default-restaurant.png') }}" class="img-fluid" alt="#">
+
+                                @php
+                                    if($food->rating >7)
+                                        $rating_color = "featured-rating-green";
+
+                                    elseif ($food->rating >5  && $food->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $food->rating }}</span>
+                                <div class="featured-title-box">
+                                    <h6>{{ $food->display_name }}</h6>
+                                    <p>Food </p> <span>• </span>
+                                    <p>0 Reviews</p> <span> • </span>
+                                    <p><span>$ </span>{{ $food->price }}</p>
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+
+
+
+            @endif
+
+
+
+            @if(isset($message))
+
+                {{ $message }}
+
+            @endif
 
 
                 </div>
@@ -244,7 +310,7 @@
                     <ul>
                         <li><a href="#"><span class="ti-facebook"></span></a></li>
                         <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                        <li><a href="#"><span class="ti-youtube"></span></a></li>
+                        <li><a href="#"><span class="ti-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -252,6 +318,8 @@
     </div>
 </footer>
 <!--//END FOOTER -->
+
+
 
 
 <!-- jQuery, Bootstrap JS. -->

@@ -25,13 +25,18 @@
                     </div>
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-10">
-                            <form class="form-wrap mt-4" action="{{ url('/restaurant-list') }}">
+                            <form class="form-wrap mt-4" action="{{ url('/search') }}" method="post" role="search" enctype="multipart/form-data">
+                                {{ csrf_field() }}
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <input type="text" placeholder="What are your looking for?" class="btn-group1">
-                                    <input type="text" placeholder="Dhaka" class="btn-group2">
+                                    <input type="text" name="q" placeholder="What are your looking for ?" class="btn-group1">
+                                    <select name="search_for" id="" class="btn-group2">
+                                        <option value="Restaurants">Restaurants</option>
+                                        <option value="Foods">Foods</option>
+                                    </select>
                                     <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH<i class="pe-7s-angle-right"></i></button>
                                 </div>
                             </form>
+
                             <div class="slider-link">
                                 <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
                             </div>
@@ -172,13 +177,13 @@
                             <p><span>$$$</span>$$</p>
                             <ul>
                                 <li><span class="icon-location-pin"></span>
-                                    <p>1301 Avenue, Brooklyn, NY 11230</p>
+                                    <p>1301 Avenue, Banani, Dhaka 1230</p>
                                 </li>
                                 <li><span class="icon-screen-smartphone"></span>
-                                    <p>+44 20 7336 8898</p>
+                                    <p>+88 017 336 8898</p>
                                 </li>
                                 <li><span class="icon-link"></span>
-                                    <p>https://burgerandlobster.com</p>
+                                    <p>http://foodvalley.xyz</p>
                                 </li>
 
                             </ul>

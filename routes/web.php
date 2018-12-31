@@ -12,6 +12,10 @@ Route::resource('/restaurant-list/', 'FrontRestaurantController');
 
 Route::resource('/food-list/', 'FrontFoodController');
 
+
+Route::any('/search', 'SearchController@index')->name('search');
+
+
 Route::get('/restaurant-categories/{id}', 'WelcomeController@get_category_name');
 Route::get('/restaurants/{id}', 'WelcomeController@get_restaurant_details');
 Route::get('/restaurant-types/{id}', 'WelcomeController@get_restaurant_type');
@@ -29,12 +33,12 @@ Route::post('/compare-view', 'CompareController@view');
 
 
 Route::get('/about', function () {
-    return 'About Us';
+    return view ('front-view.about');
 });
 
 
 Route::get('/contact', function () {
-    return 'Contact Us';
+    return view ('front-view.contact');
 });
 
 

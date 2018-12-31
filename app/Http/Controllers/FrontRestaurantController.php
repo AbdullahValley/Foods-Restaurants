@@ -9,7 +9,7 @@ class FrontRestaurantController extends Controller
 {
     public function index()
     {
-        $restaurants = Restaurant::orderBy('id', 'desc')->limit(12)->where('status', 1)->get();
+        $restaurants = Restaurant::orderBy('id', 'desc')->where('status', 1)->get();
         return view ('front-view.restaurants', compact('restaurants'));
     }
 

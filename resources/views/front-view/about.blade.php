@@ -12,7 +12,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Compare || Food & Restaurant by Abdullah Al Noman</title>
+    <title>About Us || Food & Restaurant by Abdullah Al Noman</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -102,108 +102,7 @@
 <section class="light-bg booking-details_wrap">
     <div class="container">
 
-        <form action="{{ url('/compare-view')  }}" method="post" class="form-horizontal" enctype="multipart/form-data">
-            @csrf
-
-        <div class="row">
-
-
-
-
-            <div class="col-md-4">
-
-                    <div class="form-group" align="center">
-                        <label class="col-md-4 control-label">Select Food #1</label>
-                        <div class="col-md-8">
-
-
-
-
-
-                                    <select name="food_id_1" class="form-control">
-                                                    <option value=0>Select Food</option>
-                                                @foreach($foods as $food)
-                                                    <option value={{ $food->id }} >{{ $food->display_name }}</option>
-                                                @endforeach
-                                    </select>
-
-
-
-
-
-
-                        </div>
-                    </div>
-
-
-
-            </div>
-
-
-
-
-            <div class="col-md-4">
-
-                    <div class="form-group" align="center">
-                        <label class="col-md-4 control-label">Select Food #2</label>
-                        <div class="col-md-8">
-
-
-                            <select name="food_id_2" class="form-control">
-                                <option value=0>Select Food</option>
-                                @foreach($foods as $food)
-                                    <option value={{ $food->id }} >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
-
-
-                        </div>
-                    </div>
-
-
-
-            </div>
-
-
-
-
-
-            <div class="col-md-4">
-
-
-                    <div class="form-group" align="center">
-                        <label class="col-md-4 control-label">Select Food #3</label>
-                        <div class="col-md-8">
-
-                                <select name="food_id_3" class="form-control">
-                                    <option value=0>Select Food</option>
-                                    @foreach($foods as $food)
-                                        <option value={{ $food->id }} >{{ $food->display_name }}</option>
-                                    @endforeach
-                                </select>
-
-                        </div>
-                    </div>
-
-            </div>
-
-
-
-
-        </div>
-
-            <br>
-                <br>
-                    <br>
-
-<center>
-            <div class="review-btn">
-
-                <button type="submit" class="btn btn-outline-danger">Compare Now</button>
-
-            </div>
-</center>
-        </form>
+        <h3>About Us ~ </h3>
 
     </div>
 </section>

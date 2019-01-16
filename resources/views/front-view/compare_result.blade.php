@@ -117,7 +117,7 @@
 
 
 
-            @if(Route::current()->getName() == 'food-compare-view')
+        @if(Route::current()->getName() == 'food-compare-view')
 
             <div class="row">
 
@@ -133,19 +133,18 @@
 
                             @foreach($food_1 as $food)
 
-                            <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+                                <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+                                <br><br>
+                                <b>Food Name</b> : {{ $food->name }} <br><br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br><br>
+                                <b>Title</b> : {{ $food->display_name }} <br><br>
+                                <b>Details</b> : {{ $food->details }} <br><br>
+                                <b>Price</b> : BDT <b>{{ $food->price }} Taka</b> <br><br>
 
-                            <b>Food Name</b> : {{ $food->name }} <br>
-                            <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
-                            <b>Title</b> : {{ $food->display_name }} <br>
-                            <b>Details</b> : {{ $food->details }} <br>
-                            <b>Price</b> : {{ $food->price }} <br>
-
-                            <b>Ratings</b> :<br>
+                                <b>Ratings</b> :<br>
                                 @php
                                     if($food->rating >7)
                                         $rating_color = "featured-rating-green";
-
                                     elseif ($food->rating >5  && $food->rating <7)
                                         $rating_color = "featured-rating-orange";
                                     else
@@ -180,18 +179,17 @@
                             @foreach($food_2 as $food)
 
                                 <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
-
-                                <b>Food Name</b> : {{ $food->name }} <br>
-                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
-                                <b>Title</b> : {{ $food->display_name }} <br>
-                                <b>Details</b> : {{ $food->details }} <br>
-                                <b>Price</b> : {{ $food->price }} <br>
+                                <br><br>
+                                <b>Food Name</b> : {{ $food->name }} <br><br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br><br>
+                                <b>Title</b> : {{ $food->display_name }} <br><br>
+                                <b>Details</b> : {{ $food->details }} <br><br>
+                                <b>Price</b> : BDT <b>{{ $food->price }} Taka</b> <br><br>
 
                                 <b>Ratings</b> :<br>
                                 @php
                                     if($food->rating >7)
                                         $rating_color = "featured-rating-green";
-
                                     elseif ($food->rating >5  && $food->rating <7)
                                         $rating_color = "featured-rating-orange";
                                     else
@@ -238,18 +236,17 @@
                             @foreach($food_3 as $food)
 
                                 <img src="{{ $food->photo ? asset(config('appconfig.imagePath') . $food->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
-
-                                <b>Food Name</b> : {{ $food->name }} <br>
-                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br>
-                                <b>Title</b> : {{ $food->display_name }} <br>
-                                <b>Details</b> : {{ $food->details }} <br>
-                                <b>Price</b> : {{ $food->price }} <br>
+                                <br><br>
+                                <b>Food Name</b> : {{ $food->name }} <br><br>
+                                <b>Restaurant Name</b> : {{ $food->restaurant_id }} <br><br>
+                                <b>Title</b> : {{ $food->display_name }} <br><br>
+                                <b>Details</b> : {{ $food->details }} <br><br>
+                                <b>Price</b> : BDT <b>{{ $food->price }} Taka</b> <br><br>
 
                                 <b>Ratings</b> :<br>
                                 @php
                                     if($food->rating >7)
                                         $rating_color = "featured-rating-green";
-
                                     elseif ($food->rating >5  && $food->rating <7)
                                         $rating_color = "featured-rating-orange";
                                     else
@@ -281,160 +278,157 @@
 
         @if(Route::current()->getName() == 'restaurant-compare-view')
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-md-4">
+                <div class="col-md-4">
 
-                <div class="form-group" align="center">
-                    <label class="col-md-4 control-label">Restaurant #1</label>
-                    <div class="col-md-8">
-
-
-
-
-                        @foreach($restaurant_1 as $restaurant)
-
-                            <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
-
-                            <b>Restaurant Name</b> : {{ $restaurant->name }} <br>
-                            <b>Title</b> : {{ $restaurant->display_name }} <br>
-                            <b>Details</b> : {{ $restaurant->details }} <br><br>
-
-                            <b>Ratings</b> :<br>
-                            @php
-                                if($restaurant->rating >7)
-                                    $rating_color = "featured-rating-green";
-
-                                elseif ($restaurant->rating >5  && $restaurant->rating <7)
-                                    $rating_color = "featured-rating-orange";
-                                else
-                                    $rating_color = "featured-rating";
-                            @endphp
-
-                            <span class="{{ $rating_color }}">{{ $restaurant->rating }}</span>
-
-                        @endforeach
+                    <div class="form-group" align="center">
+                        <label class="col-md-4 control-label">Restaurant #1</label>
+                        <div class="col-md-8">
 
 
 
 
+                            @foreach($restaurant_1 as $restaurant)
+
+                                <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+                                <br><br>
+                                <b>Restaurant Name</b> : {{ $restaurant->name }} <br><br>
+                                <b>Title</b> : {{ $restaurant->display_name }} <br><br>
+                                <b>Details</b> : {{ $restaurant->details }} <br><br>
+
+                                <b>Ratings</b> :<br>
+                                @php
+                                    if($restaurant->rating >7)
+                                        $rating_color = "featured-rating-green";
+                                    elseif ($restaurant->rating >5  && $restaurant->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $restaurant->rating }}</span>
+
+                            @endforeach
+
+
+
+
+                        </div>
                     </div>
+
+
+
                 </div>
+
+
+
+
+                <div class="col-md-4">
+
+                    <div class="form-group" align="center">
+                        <label class="col-md-4 control-label">Restaurant #2</label>
+                        <div class="col-md-8">
+
+
+
+                            @foreach($restaurant_2 as $restaurant)
+
+                                <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+                                <br><br>
+                                <b>Restaurant Name</b> : {{ $restaurant->name }} <br><br>
+                                <b>Title</b> : {{ $restaurant->display_name }} <br><br>
+                                <b>Details</b> : {{ $restaurant->details }} <br><br>
+
+                                <b>Ratings</b> :<br>
+                                @php
+                                    if($restaurant->rating >7)
+                                        $rating_color = "featured-rating-green";
+                                    elseif ($restaurant->rating >5  && $restaurant->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $restaurant->rating }}</span>
+
+                            @endforeach
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <center>
+                        <br><br>
+                        <div class="review-btn">
+
+                            <a href="{{ url('/restaurant-compare') }}" class="btn btn-outline-danger">Compare Again</a>
+
+                        </div>
+                    </center>
+
+
+                </div>
+
+
+
+
+
+                <div class="col-md-4">
+
+
+                    <div class="form-group" align="center">
+                        <label class="col-md-4 control-label">Restaurant #3</label>
+                        <div class="col-md-8">
+
+
+
+                            @foreach($restaurant_3 as $restaurant)
+
+                                <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
+                                <br><br>
+                                <b>Restaurant Name</b> : {{ $restaurant->name }} <br><br>
+                                <b>Title</b> : {{ $restaurant->display_name }} <br><br>
+                                <b>Details</b> : {{ $restaurant->details }} <br><br>
+
+                                <b>Ratings</b> :<br>
+                                @php
+                                    if($restaurant->rating >7)
+                                        $rating_color = "featured-rating-green";
+                                    elseif ($restaurant->rating >5  && $restaurant->rating <7)
+                                        $rating_color = "featured-rating-orange";
+                                    else
+                                        $rating_color = "featured-rating";
+                                @endphp
+
+                                <span class="{{ $rating_color }}">{{ $restaurant->rating }}</span>
+
+
+
+                            @endforeach
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+
 
 
 
             </div>
 
-
-
-
-            <div class="col-md-4">
-
-                <div class="form-group" align="center">
-                    <label class="col-md-4 control-label">Restaurant #2</label>
-                    <div class="col-md-8">
-
-
-
-                        @foreach($restaurant_2 as $restaurant)
-
-                            <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
-
-                            <b>Restaurant Name</b> : {{ $restaurant->name }} <br>
-                            <b>Title</b> : {{ $restaurant->display_name }} <br>
-                            <b>Details</b> : {{ $restaurant->details }} <br><br>
-
-                            <b>Ratings</b> :<br>
-                            @php
-                                if($restaurant->rating >7)
-                                    $rating_color = "featured-rating-green";
-
-                                elseif ($restaurant->rating >5  && $restaurant->rating <7)
-                                    $rating_color = "featured-rating-orange";
-                                else
-                                    $rating_color = "featured-rating";
-                            @endphp
-
-                            <span class="{{ $rating_color }}">{{ $restaurant->rating }}</span>
-
-                        @endforeach
-
-
-
-
-                    </div>
-                </div>
-
-
-
-                <center>
-                    <br><br>
-                    <div class="review-btn">
-
-                        <a href="{{ url('/restaurant-compare') }}" class="btn btn-outline-danger">Compare Again</a>
-
-                    </div>
-                </center>
-
-
-            </div>
-
-
-
-
-
-            <div class="col-md-4">
-
-
-                <div class="form-group" align="center">
-                    <label class="col-md-4 control-label">Restaurant #3</label>
-                    <div class="col-md-8">
-
-
-
-                        @foreach($restaurant_3 as $restaurant)
-
-                            <img src="{{ $restaurant->photo ? asset(config('appconfig.imagePath') . $restaurant->photo) : asset('image/avatar.png') }}" alt="Product Photo" width="200px;">
-
-                            <b>Restaurant Name</b> : {{ $restaurant->name }} <br>
-                            <b>Title</b> : {{ $restaurant->display_name }} <br>
-                            <b>Details</b> : {{ $restaurant->details }} <br><br>
-
-                            <b>Ratings</b> :<br>
-                            @php
-                                if($restaurant->rating >7)
-                                    $rating_color = "featured-rating-green";
-
-                                elseif ($restaurant->rating >5  && $restaurant->rating <7)
-                                    $rating_color = "featured-rating-orange";
-                                else
-                                    $rating_color = "featured-rating";
-                            @endphp
-
-                            <span class="{{ $rating_color }}">{{ $restaurant->rating }}</span>
-
-
-
-                        @endforeach
-
-
-
-
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-        </div>
-        
         @endif
-        
-        
-        
-        
+
+
+
+
 
 
 
@@ -479,4 +473,3 @@
 </body>
 
 </html>
-

@@ -1,4 +1,9 @@
-## Food Valley
+   ## Food Valley
+
+
+
+## Abstract
+This web application is the new and novel attempt at making the lives of Dhaka's food and restaurant enthusiasts easier by helping in finding that perfect place to dine at. You can easily send food request to the restaurants and get it from your location. Once you discover our website, there’s no going back to the dark-food ages.
 
 
 ## Problem Statement

@@ -19,7 +19,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Search Foods & Restaurants ~ Foods Valley</title>
+    <title>Search Foods & Restaurants ~ Food Valley</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="./">Foods Valley</a>
+                    <a class="navbar-brand" href="./">Food Valley</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-menu"></span>
                     </button>

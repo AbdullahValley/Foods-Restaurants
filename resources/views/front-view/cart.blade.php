@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="../">Foods Valley</a>
+                    <a class="navbar-brand" href="../">Food Valley</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-menu"></span>
                     </button>
@@ -150,7 +150,7 @@
                     <tr>
                         <td colspan="3" align="center"><b>Total :</b> {{ $amount }} Taka</td>
                     </tr>
-                    <tr><td colspan="3" align="center">Make Payment</td></tr>
+                    <tr><td colspan="3" align="center">Confirm Payment</td></tr>
                     </tfoot>
 
                 </table>

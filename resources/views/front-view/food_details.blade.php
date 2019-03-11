@@ -1,3 +1,11 @@
+@php
+
+    $timezone  = +6;
+    $my_time = gmdate("H:i:s", time() + 3600*($timezone+date("I")));
+
+@endphp
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -165,7 +173,20 @@
                             <input type="hidden" name="name" value="{{ $foods->display_name }}">
                             <input type="hidden" name="price" value="{{ $foods->price }}">
                         <div class="featured-btn-wrap">
-                            <button type="submit" class="btn btn-danger">ADD TO CART</button>
+
+
+                            @foreach($restaurant_info as $restaurant_time)
+
+                                @php
+                                    if ($my_time>=$restaurant_time->open && $my_time<=$restaurant_time->close)
+                                        echo "<button type='submit' class='btn btn-danger'>ADD TO CART</button>";
+                                    else
+                                        echo "<button type='submit' class='btn btn-danger' disabled>ADD TO CART</button>";
+                                @endphp
+
+                            @endforeach
+
+
                         </div>
                         </form>
                     </div>
@@ -235,9 +256,7 @@
 
                         @foreach($restaurant_info as $restaurant_time)
 
-                                {{ $restaurant_time->open." ".$restaurant_time->close }}
-
-
+{{ date('l') }} - {{ date("h:i A", strtotime($restaurant_time->open)) }} - {{ date("h:i A", strtotime($restaurant_time->close)) }}
 
                          </p>
 
@@ -245,14 +264,10 @@
 
             @php
 
-                $timezone  = +6;
-                $my_time = gmdate("H:i:s", time() + 3600*($timezone+date("I")));
-
-                                        if ($my_time>=$restaurant_time->open && $my_time<=$restaurant_time->close)
-                                            echo "<span class='open-now'>OPEN NOW</span>";
-                                        else
-                                            echo "<span class='closed-now'>CLOSED NOW</span>";
-
+                        if ($my_time>=$restaurant_time->open && $my_time<=$restaurant_time->close)
+                            echo "<span class='open-now'>OPEN NOW</span><br><br>You Can Order Now this food.";
+                        else
+                            echo "<span class='closed-now'>CLOSED NOW</span><br><br>Now You Can NOT Order this food.";
             @endphp
 
                         @endforeach

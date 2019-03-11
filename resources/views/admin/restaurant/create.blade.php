@@ -265,7 +265,7 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Video
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea id="textarea" name="video" class="form-control col-md-7 col-xs-12" placeholder="Youtube Embed Code or URL"></textarea>
+                                        <textarea id="textarea" name="video" class="form-control col-md-7 col-xs-12" placeholder="Youtube Video Code. Example : From this URL https://youtu.be/jy5kA3LdCas ... just paste = jy5kA3LdCas"></textarea>
                                     </div>
                                 </div>
 

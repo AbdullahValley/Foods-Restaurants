@@ -213,7 +213,27 @@
 
                         <br><br>
                         <p>{{ $restaurants->details }}</p>
+
+
+            @php
+
+                if($restaurants->video != NULL){
+
+echo "Restaurant Video : <br> <br><iframe width='560' height='315' src='https://www.youtube.com/embed/{$restaurants->video}?controls=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+
+                }
+
+                else{
+                    echo " ";
+                }
+
+
+
+            @endphp
+
+
                         <hr>
+
                     </div>
                     <div class="row">
                         <div class="col-md-4">
@@ -349,6 +369,7 @@
 
 
                         </p>
+
                     </div>
                     <a href="#" class="btn btn-outline-danger btn-contact">SEND A MESSAGE</a>
                 </div>

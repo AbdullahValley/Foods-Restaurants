@@ -123,6 +123,26 @@
                                 </div>
                             </div>
 
+
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="open">Restaurant Open Time
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="time" name="open" value="{{ $restaurant->open }}" class="form-control col-md-7 col-xs-12">
+                                    @if($errors->has('open')) <span class="text-danger">{{ $errors->first('open') }}</span> @endif
+                                </div>
+                            </div>
+
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="close">Restaurant Close Time
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="time" name="close" value="{{ $restaurant->close }}" class="form-control col-md-7 col-xs-12">
+                                    @if($errors->has('close')) <span class="text-danger">{{ $errors->first('close') }}</span> @endif
+                                </div>
+                            </div>
+
+
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Pros
                                 </label>

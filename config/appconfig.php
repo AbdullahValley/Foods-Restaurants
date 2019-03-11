@@ -4,6 +4,7 @@ return [
 
     'imagePath' => 'uploads/image/',
     'logoPath' => 'uploads/company-logo/',
+    'videoPath' => 'uploads/video/',
 
     'roles' => [
         1 => 'Super Admin',

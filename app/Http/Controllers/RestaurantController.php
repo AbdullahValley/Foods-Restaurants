@@ -9,6 +9,7 @@ use App\Location;
 use App\Restaurant;
 use App\SubLocation;
 use Illuminate\Http\Request;
+//use Illuminate\Support\Facades\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,6 +53,8 @@ class RestaurantController extends Controller
         $restaurant->phone            = $request->phone;
         $restaurant->facilities       = $request->facilities;
         $restaurant->capacity         = $request->capacity;
+        $restaurant->open             = $request->open;
+        $restaurant->close            = $request->close;
         $restaurant->pros             = $request->pros;
         $restaurant->cons             = $request->cons;
         $restaurant->our_opinion      = $request->our_opinion;
@@ -123,6 +126,8 @@ class RestaurantController extends Controller
         $restaurant->phone            = $request->phone;
         $restaurant->facilities       = $request->facilities;
         $restaurant->capacity         = $request->capacity;
+        $restaurant->open             = $request->open;
+        $restaurant->close            = $request->close;
         $restaurant->pros             = $request->pros;
         $restaurant->cons             = $request->cons;
         $restaurant->our_opinion      = $request->our_opinion;
@@ -143,6 +148,18 @@ class RestaurantController extends Controller
 
             if ($image) {
                 $restaurant->photo = $file->getClientOriginalName();
+            }
+        }
+
+        if($request->hasFile('video')){
+
+            $file = $request->video;
+            $filename = $file->getClientOriginalName();
+            $path = public_path().'/uploads/video/';
+            $file->move($path, $filename);
+
+            if ($file == TRUE) {
+                $restaurant->video = $file->getClientOriginalName();
             }
         }
 

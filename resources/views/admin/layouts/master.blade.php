@@ -18,11 +18,11 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="{{ asset('admin/production/images/img.jpg') }}" alt="Abdullah" class="img-circle profile_img">
+                        <img src="{{ asset('uploads/image/'.auth()->user()->photo) }}" alt="Image" class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2>Abdullah</h2>
+                        <h2>{{ auth()->user()->username }}</h2>
                     </div>
                 </div>
                 <!-- /menu profile quick info -->

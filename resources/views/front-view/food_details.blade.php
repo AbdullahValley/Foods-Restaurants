@@ -161,6 +161,7 @@
                         <form action="{{ action('CartController@store') }}" method="post" enctype="multipart/form-data" class="form-horizontal">
                             @csrf
                             <input type="hidden" name="product_id" value="{{ $foods->unique_id }}">
+                            <input type="hidden" name="checkout_id" value="{{ $foods->checkout_id }}">
                             <input type="hidden" name="name" value="{{ $foods->display_name }}">
                             <input type="hidden" name="price" value="{{ $foods->price }}">
                         <div class="featured-btn-wrap">
@@ -218,7 +219,45 @@
                         </marquee>--}}
 
                         <br><br>
-                        <p>{{ $foods->details }}</p>
+                        <p>{{ $foods->details }}
+
+                        <p>Restaurant Name :
+
+                        @foreach($restaurant_info as $restaurant_name)
+
+                                {{ $restaurant_name->display_name }}
+
+                        @endforeach
+
+                         </p>
+
+                        <p>Restaurant Open & Close Time :
+
+                        @foreach($restaurant_info as $restaurant_time)
+
+                                {{ $restaurant_time->open." ".$restaurant_time->close }}
+
+
+
+                         </p>
+
+
+
+            @php
+
+                $timezone  = +6;
+                $my_time = gmdate("H:i:s", time() + 3600*($timezone+date("I")));
+
+                                        if ($my_time>=$restaurant_time->open && $my_time<=$restaurant_time->close)
+                                            echo "<span class='open-now'>OPEN NOW</span>";
+                                        else
+                                            echo "<span class='closed-now'>CLOSED NOW</span>";
+
+            @endphp
+
+                        @endforeach
+
+
                         <hr>
                     </div>
                     {{--<div class="row">

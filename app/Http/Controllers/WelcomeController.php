@@ -63,6 +63,13 @@ class WelcomeController extends Controller
     {
         $foods = Food::find($id);
 
+        $restaurant_info =  DB::table('restaurants')
+            ->select('restaurants.display_name', 'restaurants.open', 'restaurants.close')
+            ->join('foods', 'restaurants.id', '=', 'foods.restaurant_id')
+                ->where('foods.unique_id', '=', $foods->unique_id)->get();
+
+        //dd($restaurant_name);
+
 
         //$get_sub_location_id = DB::table("restaurants")->where('unique_id', $id)->pluck("sub_location");
         //$get_sub_location_name = DB::table("sub_locations")->whereIn('id', $get_sub_location_id)->pluck("display_name");
@@ -80,7 +87,7 @@ class WelcomeController extends Controller
         //$get_city_name = DB::table("cities")->whereIn('id', $get_city_id)->pluck("display_name");
 
 
-        return view('front-view.food_details', compact('foods'));
+        return view('front-view.food_details', compact('foods', 'restaurant_info'));
     }
 
 

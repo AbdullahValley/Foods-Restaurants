@@ -333,8 +333,22 @@
                     </div>
                     <div class="address">
                         <span class="icon-clock"></span>
-                        <p>Mon - Sun 09:30 am - 05:30 pm <br>
-                            <span class="open-now">OPEN NOW</span></p>
+                        <p>{{ date('l') }} - {{ date("h:i A", strtotime($restaurants->open)) }} - {{ date("h:i A", strtotime($restaurants->close)) }}<br>
+
+                            @php
+
+    $timezone  = +6;
+    $my_time = gmdate("H:i:s", time() + 3600*($timezone+date("I")));
+
+                            if ($my_time>=$restaurants->open && $my_time<=$restaurants->close)
+                                echo "<span class='open-now'>OPEN NOW</span>";
+                            else
+                                echo "<span class='closed-now'>CLOSED NOW</span>";
+
+                            @endphp
+
+
+                        </p>
                     </div>
                     <a href="#" class="btn btn-outline-danger btn-contact">SEND A MESSAGE</a>
                 </div>

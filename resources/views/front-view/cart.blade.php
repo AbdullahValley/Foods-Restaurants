@@ -113,6 +113,7 @@
                     <tr>
                         <th>SL</th>
                         <th>Name</th>
+                        <th>Quantity</th>
                         <th>Price</th>
                         {{--<th>Quantity</th>--}}
                         {{--<th>Action</th>--}}
@@ -125,6 +126,14 @@
                         <tr>
                             <td>{{ $sl++ }}</td>
                             <td>{{ $cart->name }}</td>
+                            <td>
+                                <form>
+                                    <input type="text" maxlength="3" size="3" value="{{ $cart->quantity }}">
+
+                                    <button type="submit" class="btn">Update</button>
+                                </form>
+
+                            </td>
                             <td>{{ $cart->price }}</td>
                             {{--<td>{{ $cart->quantity }}</td>--}}
                             {{--<td>--}}
@@ -150,7 +159,9 @@
                     <tr>
                         <td colspan="3" align="center"><b>Total :</b> {{ $amount }} Taka</td>
                     </tr>
-                    <tr><td colspan="3" align="center">Confirm Payment</td></tr>
+                    <tr><td colspan="3" align="center"><b>Payment :</b> {{ 'Cash on Delivery' }}</td></tr>
+
+                    <tr><td colspan="3" align="center"><b>Confirm :</b> {{ 'Order ?' }} <a href="#">Click Here</a></td></tr>
                     </tfoot>
 
                 </table>

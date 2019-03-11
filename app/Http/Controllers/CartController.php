@@ -35,6 +35,7 @@ class CartController extends Controller
         $cart = new Cart();
 
         $cart->user_id          = Auth::id();
+        $cart->checkout_id      = $request->checkout_id; // how can i set it ?
         $cart->product_id       = $request->product_id;
         $cart->name             = $request->name;
         $cart->price            = $request->price;

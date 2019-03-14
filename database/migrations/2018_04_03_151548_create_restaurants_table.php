@@ -20,6 +20,9 @@ class CreateRestaurantsTable extends Migration
             $table->string('photo')->nullable();
             $table->string('facilities')->nullable();
             $table->integer('capacity')->nullable();
+            $table->time('open')->nullable();
+            $table->time('close')->nullable();
+            $table->float('commission_rate', 4,2)->default(0);
             $table->string('pros')->nullable();
             $table->string('cons')->nullable();
             $table->string('our_opinion')->nullable();

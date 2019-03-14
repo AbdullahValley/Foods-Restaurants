@@ -55,6 +55,7 @@ class RestaurantController extends Controller
         $restaurant->capacity         = $request->capacity;
         $restaurant->open             = $request->open;
         $restaurant->close            = $request->close;
+        $restaurant->commission_rate  = $request->commission_rate;
         $restaurant->pros             = $request->pros;
         $restaurant->cons             = $request->cons;
         $restaurant->our_opinion      = $request->our_opinion;
@@ -128,6 +129,7 @@ class RestaurantController extends Controller
         $restaurant->capacity         = $request->capacity;
         $restaurant->open             = $request->open;
         $restaurant->close            = $request->close;
+        $restaurant->commission_rate  = $request->commission_rate;
         $restaurant->pros             = $request->pros;
         $restaurant->cons             = $request->cons;
         $restaurant->our_opinion      = $request->our_opinion;

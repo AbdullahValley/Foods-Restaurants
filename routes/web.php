@@ -25,7 +25,6 @@ Route::get('/food/{id}', 'WelcomeController@get_food_details');
 
 Route::resource('/cart', 'CartController');
 
-Route::resource('/order', 'OrderController');
 
 Route::get('/session', function (){
 
@@ -100,6 +99,12 @@ Route::group(['prefix' => 'food-admin',  'middleware' => 'auth'], function()
     Route::resource('food-compares', 'FoodCompareController');
     Route::resource('restaurants', 'RestaurantController');
     Route::resource('foods', 'FoodController');
+
+    Route::resource('orders', 'OrderController');
+
+    Route::get('today-orders', 'ReportController@today_orders');
+
+    Route::get('profit-loss', 'ReportController@profit_loss');
 
 
 });

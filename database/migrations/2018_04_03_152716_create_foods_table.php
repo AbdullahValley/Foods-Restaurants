@@ -17,6 +17,7 @@ class CreateFoodsTable extends Migration
             $table->string('display_name');
             $table->string('details')->nullable();
             $table->string('photo')->nullable();
+            $table->float('commission_rate', 4,2)->default(0.00);
             $table->string('pros')->nullable();
             $table->string('cons')->nullable();
             $table->string('our_opinion')->nullable();

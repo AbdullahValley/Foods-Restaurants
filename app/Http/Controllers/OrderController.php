@@ -11,7 +11,9 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view('front-view.order');
+        $orders = Order::orderBy('id', 'desc')->get();
+
+        return view('admin.reports.all-orders', compact('orders'));
     }
 
 
@@ -36,7 +38,7 @@ class OrderController extends Controller
 
         Cart::where('checkout_id', $request->session()->get('_token'))->update(['status' => 2]);
 
-        return redirect('/order')->with('successMsg', 'Your Order Placed Successfully !');
+        return redirect('/cart')->with('successMsg', 'Your Order Placed Successfully !');
     }
 
     public function show($id)
@@ -53,12 +55,43 @@ class OrderController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $order = Order::find($id);
+
+        if($request->status == 2)
+        {
+            $order->status  = 2;
+
+            $order->save();
+
+            return redirect('food-admin/orders')->with('successMsg', 'The Order Delivered Successfully!');
+        }
+
+        elseif ($request->status == 3)
+        {
+            $order->status  = 3;
+
+            $order->save();
+
+            return redirect('food-admin/orders')->with('successMsg', 'The Order Canceled Successfully!');
+        }
+
+        else
+        {
+            $order->status  = 1;
+
+            $order->save();
+
+            return redirect('food-admin/orders')->with('successMsg', 'The Order Updated Successfully!');
+        }
+
+
     }
 
 
     public function destroy($id)
     {
-        //
+        Order::destroy($id);
+        return redirect('food-admin/orders')->with('successMsg', 'The Order Deleted Successfully!');
     }
+
 }

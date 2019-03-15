@@ -44,6 +44,7 @@ class FoodController extends Controller
         $food->name             = $request->name;
         $food->display_name     = $request->display_name;
         $food->details          = $request->details;
+        $food->commission_rate  = $request->commission_rate;
         $food->pros             = $request->pros;
         $food->cons             = $request->cons;
         $food->our_opinion      = $request->our_opinion;
@@ -107,6 +108,7 @@ class FoodController extends Controller
         $food->name             = $request->name;
         $food->display_name     = $request->display_name;
         $food->details          = $request->details;
+        $food->commission_rate  = $request->commission_rate;
         $food->pros             = $request->pros;
         $food->cons             = $request->cons;
         $food->our_opinion      = $request->our_opinion;

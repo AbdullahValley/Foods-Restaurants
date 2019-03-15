@@ -24,13 +24,36 @@
         </ul>
 </div>
 
+
+
+<div class="menu_section">
+    <h3>Reports</h3>
+    <ul class="nav side-menu">
+        <li><a><i class="fa fa-desktop"></i> Daily Report <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="{{ url('/food-admin/today-orders') }}">Today's Order List</a></li>
+                <li><a href="{{ url('/food-admin/orders') }}">All Orders</a></li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-calculator"></i> Monthly Report <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu">
+                <li><a href="{{ url('/food-admin/profit-loss') }}">Monthly Profit & Loss</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
+
+
+
     <div class="menu_section">
         <h3>Restaurant</h3>
         <ul class="nav side-menu">
             <li><a><i class="fa fa-crosshairs"></i> Restaurant Types <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{ url('/food-admin/restaurant-types/create') }}">Add Type</a></li>
-                    <li><a href="{{ url('food-admin/restaurant-types') }}">All Types</a></li>
+                    <li><a href="{{ url('/food-admin/restaurant-types') }}">All Types</a></li>
                 </ul>
             </li>
             <li><a><i class="fa fa-certificate"></i> Restaurant Categories <span class="fa fa-chevron-down"></span></a>

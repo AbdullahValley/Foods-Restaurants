@@ -25,6 +25,15 @@ Route::get('/food/{id}', 'WelcomeController@get_food_details');
 
 Route::resource('/cart', 'CartController');
 
+Route::resource('/order', 'OrderController');
+
+Route::get('/session', function (){
+
+    $data = session()->all();
+
+    return $data;
+});
+
 
 Route::get('/food-compare', 'CompareController@index')->name('food-compare');
 Route::post('/food-compare-view', 'CompareController@view')->name('food-compare-view');;

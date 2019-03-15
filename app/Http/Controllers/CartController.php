@@ -16,10 +16,10 @@ class CartController extends Controller
         //$restaurants = Restaurant::orderBy('id', 'desc')->where('status', 1)->get();
 
         //$foods = Food::orderBy('id', 'desc')->where('status', 1)->get();
-        $cart = Cart::orderBy('id', 'desc')->where('status', 1)->where('user_id', Auth::id())->get();
+        $cart = Cart::orderBy('id', 'desc')->where('status', 1)->where('checkout_id', session()->get('_token'))->get();
         //$balance = DB::table('carts')->where('user_id' '=' Auth::id())->sum('balance');
 
-        $amount = Cart::where('user_id', Auth::id())->sum('price');
+        $amount = Cart::where('status', 1)->where('checkout_id', session()->get('_token'))->sum('price');
 
         return view('front-view.cart', compact('cart', 'amount'));
     }
@@ -35,7 +35,7 @@ class CartController extends Controller
         $cart = new Cart();
 
         $cart->user_id          = Auth::id();
-        $cart->checkout_id      = $request->checkout_id; // how can i set it ?
+        $cart->checkout_id      = $request->session()->get('_token');
         $cart->product_id       = $request->product_id;
         $cart->name             = $request->name;
         $cart->price            = $request->price;

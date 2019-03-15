@@ -12,7 +12,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="#">
     <!-- Page Title -->
-    <title>Cart || Food & Restaurant by Abdullah Al Noman</title>
+    <title>Order || Food & Restaurant by Abdullah Al Noman</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front-end/css/bootstrap.min.css') }}">
     <!-- Google Fonts -->
@@ -108,145 +108,11 @@
                         </span>
             @endif
 
-                <table class="table table-bordered" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>SL</th>
-                        <th>Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        {{--<th>Quantity</th>--}}
-                        {{--<th>Action</th>--}}
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @php($sl=1)
-
-                    @foreach($cart as $cart)
-                        <tr>
-                            <td>{{ $sl++ }}</td>
-                            <td>{{ $cart->name }}</td>
-                            <td>
-{{--                                <form>
-                                    <input type="text" maxlength="3" size="3" value="{{ $cart->quantity }}">
-
-                                    <button type="submit" class="btn">Update</button>
-                                </form>--}}
-                                {{ $cart->quantity }} Pcs
-
-                            </td>
-                            <td>{{ $cart->price }}</td>
-                            {{--<td>{{ $cart->quantity }}</td>--}}
-                            {{--<td>--}}
-
-                                {{--<a href="{{ action('FoodNewsController@edit', $food_news->unique_id) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</a>--}}
-                                {{--<form action="{{ action('FoodNewsController@destroy', $food_news->unique_id) }}" method="post" style="display: inline">--}}
-                                    {{--@csrf--}}
-                                    {{--{{ method_field('DELETE') }}--}}
-                                    {{--<button type="submit" class="btn btn-danger btn-xs" onclick="return confirm('PERMANENTLY Delete this User. Are you Sure ?')">--}}
-                                        {{--<i class="fa fa-trash-o"> Delete</i>--}}
-                                    {{--</button>--}}
-                                {{--</form>--}}
 
 
-                            {{--</td>--}}
-                        </tr>
+            <br> <br>
 
-                    @endforeach
-
-                    </tbody>
-
-                    <tfoot>
-                    <tr>
-
-                        @if($sl > 1)
-
-                        <td colspan="4" align="center">
-
-                            <b>Total :</b> {{ $amount }} Taka <br>
-                            <b>Payment :</b> {{ 'Cash on Delivery' }} <br><br>
-
-
-                            <form action="{{ action('OrderController@store') }}" method="post" enctype="multipart/form-data" class="form-horizontal">
-                                @csrf
-
-                                <label for="mobile">Mobile : </label>
-                                <input id="mobile" type="text" name="mobile">
-
-                                <br>
-
-                                <label for="address">Address : </label>
-                                <textarea id="address" name="address"></textarea>
-
-                                <br>
-
-                                <input type="hidden" name="total" value="{{ $amount }}">
-
-                                <br>
-
-                                <b>Confirm :</b> {{ 'Order ?' }}
-                                <button type="submit">Click Here</button>
-
-                            </form>
-
-
-                        </td>
-
-                        @endif
-
-                    </tr>
-
-                        @if($sl <= 1)
-
-                            <tr><td colspan="4" align="center">
-
-                                        {{ 'Your Cart is Empty ! Please Add Something to Cart.' }}
-
-                            </td></tr>
-
-                        @endif
-
-                    </tfoot>
-
-                </table>
-            {{--<div class="col-md-6">
-                <form action="" method="post" class="form-horizontal">
-                    @csrf
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Select Restaurant</label>
-                        <div class="col-md-8">
-                            <select name="customer" class="form-control">
-                                <option value="">Choose Restaurant</option>
-                                @foreach($restaurants as $restaurant)
-                                    <option value="{{ $restaurant->id }}">{{ $restaurant->display_name }}</option>
-                                @endforeach
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Select Food</label>
-                        <div class="col-md-8">
-                            <select name="country" id="country" class="form-control">
-                                <option value="">Choose Food</option>
-                                @foreach($foods as $food)
-                                    <option value="{{ $food->id }}" >{{ $food->display_name }}</option>
-                                @endforeach
-                            </select>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Show Food Details</label>
-                        <div class="col-md-8">
-
-                            <p>Photo : </p> <p>Name : </p> <p>Price : </p> <p>Rating : </p>
-
-                        </div>
-                    </div>
-
-                </form>
-            </div>--}}
+            {{ 'Order Page' }}
 
         </div>
     </div>

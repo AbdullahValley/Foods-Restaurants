@@ -171,21 +171,22 @@
                                 @csrf
 
                                 <label for="mobile">Mobile : </label>
-                                <input id="mobile" type="text" name="mobile">
+                                <input id="mobile" type="text" name="mobile" required>
 
                                 <br>
 
                                 <label for="address">Address : </label>
-                                <textarea id="address" name="address"></textarea>
+                                <textarea id="address" name="address" required></textarea>
 
                                 <br>
 
                                 <input type="hidden" name="total" value="{{ $amount }}">
+                                <input type="hidden" name="commission" value="{{ $commission }}">
 
                                 <br>
 
                                 <b>Confirm :</b> {{ 'Order ?' }}
-                                <button type="submit">Click Here</button>
+                                <button type="submit" onclick="return confirm('Confirm Your Order ?')">Click Here</button>
 
                             </form>
 

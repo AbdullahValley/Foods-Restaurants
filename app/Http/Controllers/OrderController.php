@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Food;
 use App\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,9 +30,10 @@ class OrderController extends Controller
 
         $order->user_id          = Auth::id();
         $order->checkout_id      = $request->session()->get('_token');
-        $order->mobile          = $request->mobile;
+        $order->mobile           = $request->mobile;
         $order->address          = $request->address;
         $order->total            = $request->total;
+        $order->commission       = $request->commission;
         $order->status           = 1;
 
         $order->save();

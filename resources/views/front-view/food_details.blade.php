@@ -172,6 +172,7 @@
                             <input type="hidden" name="checkout_id" value="{{ $foods->checkout_id }}">
                             <input type="hidden" name="name" value="{{ $foods->display_name }}">
                             <input type="hidden" name="price" value="{{ $foods->price }}">
+                            <input type="hidden" name="commission_rate" value="{{ $foods->commission_rate }}">
                         <div class="featured-btn-wrap">
 
 

@@ -7,6 +7,7 @@ use App\Cart;
 use Illuminate\Support\Facades\Auth;
 use App\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CartController extends Controller
 {
@@ -21,7 +22,9 @@ class CartController extends Controller
 
         $amount = Cart::where('status', 1)->where('checkout_id', session()->get('_token'))->sum('price');
 
-        return view('front-view.cart', compact('cart', 'amount'));
+        $commission = Cart::where('status', 1)->where('checkout_id', session()->get('_token'))->sum('commission');
+
+        return view('front-view.cart', compact('cart', 'amount', 'commission'));
     }
 
     public function create()
@@ -39,6 +42,7 @@ class CartController extends Controller
         $cart->product_id       = $request->product_id;
         $cart->name             = $request->name;
         $cart->price            = $request->price;
+        $cart->commission       = ($request->price*$request->commission_rate)/100;
         $cart->quantity         = 1;
         $cart->attributes       = "";
         $cart->status           = 1;

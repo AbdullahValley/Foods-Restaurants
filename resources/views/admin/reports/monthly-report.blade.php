@@ -17,7 +17,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Profit</h2>
+                    <h2>This Month Profit</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -41,13 +41,40 @@
 
 
                         <tr>
-                            <td>
+                            <td align="center">
+                                <b>Total Delivered Order</b>
 
-                                + 20,000 Taka
+                            </td>
+                            <td align="center">
+                                <b>Income</b>
+
+                            </td>
+                            <td align="center">
+                                <b>Profit</b>
 
                             </td>
 
                         </tr>
+                        <tr>
+                            <td align="center">
+
+                                {{ $reports->orders }}
+
+                            </td>
+                            <td align="center">
+
+                                {{ $reports->total }} Taka
+
+                            </td>
+                            <td align="center">
+
+                                {{ round($reports->commission, 2) }} Taka
+
+                            </td>
+
+                        </tr>
+
+
 
 
 
@@ -66,7 +93,7 @@
 
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Loss</h2>
+                    <h2>Today's Profit</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -90,13 +117,40 @@
 
 
                         <tr>
-                            <td>
+                            <td align="center">
+                                <b>Today's Delivered Order</b>
 
-                                - 10,000 Taka
+                            </td>
+                            <td align="center">
+                                <b>Income</b>
+
+                            </td>
+                            <td align="center">
+                                <b>Profit</b>
 
                             </td>
 
                         </tr>
+                        <tr>
+                            <td align="center">
+
+                                {{ $today_reports->orders }}
+
+                            </td>
+                            <td align="center">
+
+                                {{ $today_reports->total }} Taka
+
+                            </td>
+                            <td align="center">
+
+                                {{ round($today_reports->commission, 2) }} Taka
+
+                            </td>
+
+                        </tr>
+
+
 
 
 

@@ -18,16 +18,11 @@ class ReportController extends Controller
 
     public function profit_loss()
     {
-/*        $reports = Order::orderBy('id', 'desc')->whereDate('created_at', today())->get();;
+        $reports = Order::where('status', 2)->selectRaw('COUNT(id) as orders')->selectRaw('SUM(total) as total')->selectRaw('SUM(commission) as commission')->whereMonth('created_at', '=', date('m'))->first();
 
-        $date = now()->startOfDay;
+        $today_reports = Order::where('status', 2)->selectRaw('COUNT(id) as orders')->selectRaw('SUM(total) as total')->selectRaw('SUM(commission) as commission')->whereDay('created_at', '=', date('d'))->first();
 
-        $date = now()->subDays(30)->startOfDay;
-
-        App\User::where('field_name', '>=', $date)->orderBy('field_name', 'desc')->limit(3)->get();*/
-
-
-        return view('admin.reports.monthly-report', compact('reports'));
+        return view('admin.reports.monthly-report', compact('reports', 'today_reports'));
 
     }
 }
